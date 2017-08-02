@@ -1,0 +1,103 @@
+/*css reset*/
+*{
+    margin: 0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+img{
+    border:0;
+}
+body{
+    background: white;
+}
+.warp{
+    position: relative;
+    width:950px;
+    margin:0 auto;
+}
+
+/*nav 开始*/
+#nav{
+     height:84px;
+}
+#logo{
+     position: absolute;
+     left:0;
+     top:50%;
+     margin-top:-17px;
+    }
+#search-box{
+    float:left;
+    height:30px;
+    position: relative;
+    left:180px;
+    top:50%;
+    margin-top:-15px;
+    border:1px solid black
+}
+#ipt-search{
+    width: 240px;
+    border:none;
+    font-size: 13px;
+    height: 20px;
+    padding: 5px;
+    float: left;
+}
+#btn-search{
+    width: 30px;
+    height: 30px;
+    border:0;
+    float: left;
+    background: url("../image/bn_srh_1.png") no-repeat center center;
+    border:none
+}
+#nav-menu{
+    height:21px;
+    position: absolute;
+    right:0;
+    top:50%;
+    margin-top: -10px;
+}
+#nav-menu li{
+    list-style:none;
+    float:left;
+    margin-left:17px;
+    }
+#nav-menu a{
+    display:inline-block;
+    width: 40px;
+    height:20px;
+    background:url("../image/anony_nav_logo.png") no-repeat 100% 100%;
+    overflow:hidden;
+    text-indent:-999px;/*文本缩进*/
+    }
+#nav-menu .read{
+     background-position: 0 0;
+ }
+#nav-menu .movie{
+     background-position: -60px 0;
+ }
+#nav-menu .music{
+    background-position: -120px 0;
+}
+#nav-menu .group{
+     background-position: -180px 0;
+ }
+#nav-menu .city{
+    background-position: -240px 0;
+}
+#nav-menu .FM{
+    background-position: -300px 0;
+}
+#nav-menu .time{
+    background-position: -360px 0;
+}
+#nav-menu .market{
+    background-position: -420px 0;
+}
+
