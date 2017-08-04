@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding:0;
+    font-size: 12px;
 }
 a{
     text-decoration: none;
@@ -9,6 +10,8 @@ a{
 ul,ol{
     list-style: none;
 }
+input{
+    outline:none;}
 img{
     border:0;
 }
@@ -100,4 +103,3 @@ body{
 #nav-menu .market{
     background-position: -420px 0;
 }
-

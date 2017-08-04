@@ -1,0 +1,224 @@
+#banner {
+    background: #edf4ed;
+    height: 178px;
+}
+
+#banner .warp {
+    height: 178px;
+    background-image: url("../image/doubanapp5.png"), url("../image/doubanapp5_bg.png");
+    background-repeat: no-repeat;
+    background-position: 100px 0, 0 0;
+    overflow:hidden;
+
+}
+
+#banner #app {
+    margin-left: 500px;
+    margin-top: 30px;;
+}
+
+#banner h1 {
+    color: #111;
+    margin-left: 10px;
+    font-size: 25px;
+    line-height: 24px;
+    margin: 20px auto;
+}
+#banner p{
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin:20px 0;
+}
+#app a{
+     display: inline-block;
+     width: 114px;
+     height: 30px;
+     background: #00B51D;
+     text-align: center;
+     color: white;
+     margin:15px auto;
+     line-height:30px;
+    border-radius:2px;
+ }
+#banner img{
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+}
+#banner .form-login{
+    width: 272px;
+    position: absolute;
+    right:0;
+    top: 15px;
+    border: 0;
+    height: 32px;
+}
+#banner .form-login p{
+    border: 1px solid #DBE5DB;
+    height: 32px;
+    margin: 5px auto;
+    line-height: 32px;
+}
+#banner .pass,#banner .mail{
+    width:100%;
+    height: 30px;
+    border:0;
+    text-indent:7px;
+}
+#banner .pass{
+    width: 236px;
+    line-height: 32px;
+}
+
+#banner .btn{
+    width: 132px;
+    border: 0;
+    padding: 7px 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+#banner .fff{
+    background: #fff;
+}
+.btn.login{
+    background:#2a8c70;
+    color: #fff;
+}
+.btn.zhuce{
+    color: #30A080;
+    background: #fff;
+
+}
+#banner .other-login{
+
+    float: right;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+#banner .other-login li{
+    float:right;
+}
+#banner .other-login img{
+    width: 20px;
+    height: 20px;
+}
+.warp h2{
+    background: #000000;
+    color: #ffffff;
+    position: absolute;
+    opacity: 0.5;
+    bottom:0;
+    right: 0;
+}
+.warp.jianju{
+    margin-top:30px;
+    background: url("../image/c980da1288e4fa0.jpg")
+}
+.font{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #072;
+    line-height: 150%;
+    display: inline-block;
+    width: 650px;
+
+}
+#left{
+    width: 347px;
+    float:left;
+}
+#left .float{
+    width: 170px;
+    height: 189px;
+    float: left;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+#left .float img{
+    width: 170px;
+    height: 170px;
+}
+#right{
+    width: 265px;
+    float: right;
+    padding-top:120px;
+}
+#right img
+{
+    width: 250px;
+    height: 125px;
+position: absolute;
+    top: 15px;}
+
+#center{
+    margin-left: 357px;
+    margin-right: 20px;
+}
+#center li,#right li{
+    width:275px;
+    height: 38px;
+    margin-top: 10px;
+}
+#center a:hover,.book a:hover,#right a:hover,.mian a:hover,.lefta a:hover{
+    background: #0000ff;
+    color:#fff;
+}
+.warp.foot{
+    margin-bottom: 30px;
+}
+.warp .book{
+    width: 100px;
+    height: 230px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    float:left;
+    text-align: center;
+}
+.warp .book img{
+    width: 100px;
+    height: 141px;
+}
+.book a{
+    letter-spacing:2px;
+    text-align: center;
+    color:black;
+}
+.warp.movie h1{
+    font-size:24px;display:inline;
+    height: 500px;
+    background: #ffffff;
+    float: left;
+}
+.warp.movie span{
+    margin-left: 60px;
+
+}
+.movie ol{
+    margin-left: 100px;
+}
+.movie li{
+    width: 250px;
+    height: 171px;
+    float: left;
+    margin-left: 20px;
+}
+.movie img{
+    width: 250px;
+    height: 140px;
+}
+.lefta{
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+.lefta ol{
+    margin-top: 30px;
+}
+.lefta li{
+    line-height: 30px;
+}
+.righta{
+    float:right;
+}
