@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = window.prompt();
+    function age(year) {
+        if (year < 14) {
+            return "儿童"
+        }
+        if (year < 24) {
+            return '青少年'
+        }
+        if (year < 40) {
+            return '青年'
+        }
+        if (year < 60) {
+            return '中年'
+        }
+        return '老年'
+    }
+    alert(age(str));
+
+</script>
+</body>
+</html>
