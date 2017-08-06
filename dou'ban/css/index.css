@@ -212,6 +212,7 @@ position: absolute;
     float: left;
     width: 100px;
     height: 100px;
+    margin-left: 200px;
 }
 .lefta ol{
     margin-top: 30px;
@@ -221,4 +222,11 @@ position: absolute;
 }
 .righta{
     float:right;
+}
+.right{
+    width:300px;
+
+}
+.gray{
+    background: #cccccc;
 }

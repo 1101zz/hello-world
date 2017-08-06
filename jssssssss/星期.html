@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var week=window.prompt('输入0~6的数字')
+    function weekend(weeke) {
+        switch (weeke){
+            case '0':alert('星期日');break;
+            case '1':alert('星期1');break;
+            case '2':alert('星期2');break;
+            case '3':alert('星期3');break;
+            case '4':alert('星期4');break;
+            case '5':alert('星期5');break;
+            case '6':alert('星期6');break;
+            default:alert('请重新输入'); week=window.prompt('输入0~6的数字');weekend(week);break;
+        }
+    }
+    weekend(week)
+</script>
+</body>
+</html>

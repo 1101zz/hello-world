@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for(var a=1000;a<=9999;a++){
+        var d= Math.floor(a/1000)
+        var b=(Math.floor(a/10))%10
+        var c=(Math.floor(Math.floor(a/10)/10))%10
+            if(a%13==0&&d==b+c){
+            document.write(a+'   ')
+            }
+    }
+</script>
+</body>
+</html>
