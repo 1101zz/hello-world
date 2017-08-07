@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><script>
+var odi = document.getElementById('container')
+var oul = document.getElementById('tabs')
+var ali = oul.getElementsByTagName('li')
+var oimg = document.getElementById('imgs')
+var aimg = oimg.getElementsByTagName('img')
+var index = 0;
+function bian(elem) {
+for (i = 0; i < ali.length; i++) {
+ali[i].className = ''
+aimg[i].className = ''
+}
+elem.className = 'selected'
+aimg[elem.index].className = 'selected'
+
+}
+for (var i = 0; i < ali.length; i++) {
+ali[i].index = i;
+ali[i].onmousemove = function () {
+bian(this);
+index = this.index
+}
+}
+var oprev = document.getElementById('prev')
+var onext = document.getElementById('next')
+oprev.onclick = function () {
+if (index == 0) {
+index = ali.length
+}
+index--;
+bian(ali[index])
+}
+onext.onclick = function () {
+index++;
+if (index == ali.length) {
+index = 0
+}
+bian(ali[index])
+}
+var a
+function aa() {
+a = setInterval(function () {
+onext.onclick()
+}, 50)
+}
+
+odi.onmousemove = function () {
+clearInterval(a)
+}
+odi.onmouseout=function () {
+aa()
+
+}
+</script>
+</body>
+</html>

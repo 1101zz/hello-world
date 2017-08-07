@@ -56,21 +56,20 @@
         <div>zxc</div>
     </div>
 </div>
-<script>var oid = document.getElementById('tabs');
-  var oc=document.getElementById('c')
-    var ali=oid.getElementsByTagName('li')
-    var odiv=oc.getElementsByTagName('div')
-
-    for(var i=0;i<ali.length;i++)
-    {   ali[i].index=i;
-        ali[i].onclick = function(){
-            for(i=0;i<ali.length;i++)
-            {
+<script>
+    var ool=document.getElementById('tabs')
+    var ali=ool.getElementsByTagName('li')
+    var oid=document.getElementById('c')
+    var adiv=oid.getElementsByTagName('div')
+    for(i=0;i<ali.length;i++){
+        ali[i].index=i
+        ali[i].onclick=function () {
+            for(i=0;i<ali.length;i++){
                 ali[i].className=''
-                odiv[i].className=''
+                adiv[i].className=''
             }
             this.className='selected1'
-            odiv[this.index].className='selected'
+            adiv[this.index].className='selected'
         }
     }
 </script>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #container {
+            width: 680px;
+            height: 344px;
+            background: #ff0000;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        #tabs {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        #tabs li {
+            width: 20px;
+            height: 20px;
+            background: #000000;
+            color: #fff;
+            text-align: center;
+            float: left;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        #tabs .selected {
+            background: orange;
+            color: #ffffff;
+        }
+
+        #imgs img {
+            display: none;
+        }
+
+        #imgs .selected {
+            display: block;
+        }
+
+        #arrows {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+
+        #arrows span {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #000000;
+            color: #ffffff;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="tabs">
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div id="imgs">
+        <img class="selected" src="../../联系/11/img/1.jpg" alt="">
+        <img src="../../联系/11/img/2.jpg" alt="">
+        <img src="../../联系/11/img/3.jpg" alt="">
+        <img src="../../联系/11/img/4.jpg" alt="">
+    </div>
+    <div id="arrows">
+        <span id="prev">&lt;</span>
+        <span id="next">&gt;</span>
+    </div>
+</div>
+<script>
+    var od=document.getElementById('container')
+    var oul = document.getElementById('tabs')
+    var ali = oul.getElementsByTagName('li')
+    var oimg = document.getElementById('imgs')
+    var aimg = oimg.getElementsByTagName('img')
+    var oprev=document.getElementById('prev')
+    var onext=document.getElementById('next')
+    var index=0
+    for (i = 0; i < ali.length; i++) {
+        ali[i].index = i
+        ali[i].onmousemove = function () {
+         abc(this)
+        }
+    }
+    function abc(elem) {
+        for (i = 0; i < ali.length; i++) {
+        ali[i].className = ''
+        aimg[i].className = ''
+    }
+        elem.className = 'selected'
+        aimg[elem.index].className = 'selected'
+    }
+
+  onext.onclick=function () {
+        index++
+      if(index==ali.length){
+            index=0
+      }
+      abc(ali[index])
+}
+oprev.onclick=function () {
+        index--
+        if(index==-1){
+            index=ali.length-1
+        }
+
+    abc(ali[index])
+}
+var time
+    function run() {
+   time=setInterval(function () {
+    onext.onclick()
+},1000)}
+    od.onmousemove=function () {
+        clearInterval(time)
+    }
+od.onmouseout=function () {
+    run()
+}
+</script>
+</body>
+</html>
