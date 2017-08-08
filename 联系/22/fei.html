@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 2003px;
+        }
+        #fei{
+            width: 80px;
+            height: 80px;
+            background: #ff0000;
+            position: fixed;
+            right: 10px;
+            bottom: 0%;
+        }
+    </style>
+</head>
+<body>
+<div id="fei">
+    fei
+</div>
+<script>
+ var time
+    var b=document.getElementById('fei')
+
+
+    b.onclick=function () {
+        var a=document.documentElement.scrollTop||document.body.scrollTop;
+       var time=setInterval(function () {console.log(a)
+            scrollTo(0,a-=a/8w)
+            if(a<=1){
+                clearInterval(time)
+            }
+        },50)
+
+    }
+</script>
+</body>
+</html>
