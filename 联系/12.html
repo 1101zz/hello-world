@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .aaa{
+            background: #ff8c8d;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="asd">
+<ol>
+    <li>zby</li>
+    <li>asdlhas</li>
+    <li>wifeona</li>
+    <li>pqwkfass</li>
+    <li>pqfjdkn</li>
+    <li>asdljasx</li>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+
+            $('#asd').keyup(function () {
+                $asd=$('#asd').val()
+                $('li').removeClass('aaa')
+                if($asd!='')
+                $('li:contains('+$asd+')').addClass('aaa')
+            }
+
+            )
+        })
+    </script>
+</body>
+</html>
