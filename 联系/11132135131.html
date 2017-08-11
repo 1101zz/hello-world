@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ol{
+            list-style: none;
+        }
+        li{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+        }
+        .re{
+            background: #ff0000;
+        }
+        .yello{
+            background: yellow;
+        }
+#huanfu{
+    width: 100px;
+    height: 100px;
+
+}
+    </style>
+</head>
+<body>
+<ol>
+    <li style="background: red"></li>
+    <li style="background: green"></li>
+    <li style="background: yellow"></li>
+    <li style="background: blue"></li>
+    <li style="background: black"></li>
+    <li style="background: pink"></li>
+    <li style="background: skyblue"></li>
+
+
+
+
+
+
+</ol>
+<div id="huanfu">asdasd</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $('li').on('click',function () {
+            $('#huanfu').css('background',$(this).css('background'))
+        })
+    })
+</script></body>
+</html>
