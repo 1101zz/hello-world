@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .cricle, .cricle::after{
+            width: 200px;
+            height: 200px;
+            border: 10px solid;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .cricle.blue{
+            border: 10px solid blue;
+            position: absolute;
+            left: 0 ;
+        }
+        .cricle.blue::after{
+            border-bottom-color: transparent;
+            z-index: 1;
+            border-color: blue;
+        }
+        .cricle.red{
+            border: 10px solid red;
+            position: absolute;
+            left: 250px;
+        }
+        .cricle.green{
+            border: 10px solid green;
+            position: absolute;
+            left: 500px;
+        }
+        .cricle.yellow{
+            border: 10px solid yellow;
+        position: absolute ;
+            top: 150px;
+            left: 100px;}
+        .cricle.black{
+            border: 10px solid black;
+        position: absolute  ;
+            top: 150px;
+            left: 350px;}
+    </style>
+</head>
+<body>
+<div class="cricle blue"></div>
+<div class="cricle red"></div>
+<div class="cricle yellow"></div>
+<div class="cricle green"></div>
+<div class="cricle black"></div>
+</body>
+</html>
