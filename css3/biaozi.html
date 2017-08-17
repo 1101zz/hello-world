@@ -4,82 +4,136 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        body{
+            perspective: 1000px;
+        }
         #clock {
-            width: 400px;
-            height: 400px;
-            border: 3px solid black;
+            width: 198px;
+            height: 396px;
+            border:  solid black;
             border-radius: 50%;
             position: relative;
-            transition: all 1s;
+            border-width: 2px 200px 2px 2px;
+            animation: asd 0.0001s linear infinite;
         }
-        #hour{
+@keyframes  asd{
+    from{}
+    to{transform: rotateZ(-360deg)}
+}
+        #hour {
             width: 10px;
             height: 100px;
             background: #ffff00;
             position: absolute;
-            left: 50%;
-            top:50%;
+            left: 100%;
+            top: 50%;
             transform-origin: bottom center;
-            transform:translate(-50%, -100%) rotate(0deg);
-            transition: all 1s;
+            transform: translate(-50%, -100%) rotate(0deg);
+
         }
-        #minute{
+
+        #minute {
             width: 7px;
             height: 150px;
             background: green;
             position: absolute;
-            left: 50%;
-            top:50%;
-             transform-origin: bottom center;
-            transform:translate(-50%, -100%) rotate(0deg);
-            transition: all 1s;
+            left: 100%;
+            top: 50%;
+            transform-origin: bottom center;
+            transform: translate(-50%, -100%) rotate(0deg);
+
         }
-        #second{
+
+        #second {
             width: 5px;
             height: 170px;
             background: red;
-            position: relative;
-            left: 50%;
-            top:50%;
+            position: absolute;
+            left: 100%;
+            top: 50%;
             transform-origin: bottom center;
-            transform:translate(-50%, -100%) rotate(0deg);
+            transform: translate(-50%, -100%) rotate(0deg);
             transition: all 1s;
 
+        }
+
+        #pa {
+            width: 400px;
+            height: 400px;
+            display: inline-block;
+        }
+
+        #pa li {
+            width: 6px;
+            height: 20px;
+            background:deepskyblue;
+            transform-origin: 0 200px;
+            list-style: none;
+            position: absolute;
+            left: 100%;
+            transform: translate(-50%, 0);
+        }
+
+        #pa li:nth-child(5n+1) {
+            height: 30px;
+        }
+        #div2{
+            width: 50px;
+            height: 50px;
+            border: 74px solid #000;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            background: #fff;
+        }
+        #div3{
+            width: 50px;
+            height: 50px;
+            border: 74px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: #000;
         }
     </style>
 
 </head>
 <body>
 <div id="clock">
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="pa"></div>
     <div id="hour"></div>
     <div id="minute"></div>
     <div id="second"></div>
+
 </div>
 <script src="jquery-1.12.4.js"></script>
 <script>
-    var ohour=document.getElementById('hour')
-    var ominute=document.getElementById('minute')
-    var osecond=document.getElementById('second')
+    var ohour = document.getElementById('hour')
+    var ominute = document.getElementById('minute')
+    var osecond = document.getElementById('second')
+    var opa = document.getElementById('pa')
+    for (var i = 0; i < 60; i++) {
+        opa.innerHTML += "<li style='transform:rotate(" + i * 6 + "deg)'></li>"
 
-//    $(function () {
-//        setInterval(function () {
-//            $('#second').css('rotate',odate.getSeconds/6)
-//        },300)
-//    })
+    }
+
+
     setInterval(function () {
         var odate = new Date()
-        if(odate.getSeconds()*6==0){
-            osecond.style.transform='translate(-50%, -100%) rotate('+odate.getSeconds()*6+360+ 'deg)'
-        }
-        osecond.style.transform='translate(-50%, -100%) rotate('+odate.getSeconds()*6+ 'deg)'
-        ominute.style.transform='translate(-50%, -100%) rotate('+odate.getMinutes()*6+ 'deg)'
-        ohour.style.transform='translate(-50%, -100%) rotate('+odate.getHours()*30+ 'deg)'
+        var a = odate.getSeconds()
+        var b = odate.getMinutes()
+        var c = odate.getHours()
+        osecond.style.transform = 'translate(-50%, -100%) rotate(' + a * 6 + 'deg)'
+        ominute.style.transform = 'translate(-50%, -100%) rotate(' + (b + a / 60) * 6 + 'deg)'
+        ohour.style.transform = 'translate(-50%, -100%) rotate(' + (c + b / 60 + a / 3600) * 30 + 'deg)'
+//        console.log(odate.getSeconds()*6)
+//        console.log(odate.getMinutes() * 6)
+//        console.log(odate.getHours() * 30)
 
-        console.log(odate.getSeconds())
-        console.log(odate.getMinutes()*6)
-        console.log(odate.getHours()*30)
-
-    },1000)
+    }, 1000)
 </script>
 </body>
 </html>
