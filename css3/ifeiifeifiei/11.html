@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+
+    #rongqi {
+        background-image: url("img/bg.jpg"
+        );
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .img {
+        width: 125px;
+        height: 125px;
+        border: 5px solid #fff;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: -500px;
+        left: -500px;
+        transition: all 1s ease;
+        cursor: pointer;
+    }
+
+    span {
+        width: 125px;
+        height: 125px;
+        display: block;
+    }
+</style>
+<body>
+<div id="rongqi">
+</div>
+<script>
+    (function () {
+        var col = 6, row = 4, num = col * row, index = 0, count = 0;
+        for (var i = 0; i < num; i++) {
+            var newsmall = new Image();
+            var newbig = new Image();
+            newsmall.src = 'img/thumbs/' + (i + 1) + '.jpg';
+            newbig.src = 'img/' + (i + 1) + '.jpg';
+            newbig.onload = function () {
+                count++
+                if (count == num * 2) {
+                    chenggong()
+                }
+            }
+            newsmall.onload = function () {
+                count++
+                if (count == num * 2) {
+                    chenggong()
+                }
+            }
+        }
+        function chenggong() {
+
+            var odiv = document.getElementById('rongqi')
+
+            for (var i = 0; i < row; i++) {
+                for (var j = 0; j < col; j++) {
+                    index++;
+                    var odi = document.createElement('div')
+                    odi.innerHTML = '<span></span>'
+                    odi.className = 'img'
+                    odi.style.backgroundImage = 'url(img/thumbs/' + index + '.jpg)'
+                    odi.index = {
+                        col: j,
+                        row: i,
+                        index: index
+                    }
+                    odiv.appendChild(odi)
+                }
+            }
+            var adi = odiv.getElementsByTagName('div')
+
+            var oleft = (odiv.offsetWidth - adi[0].offsetWidth * col) / col + 1
+            var otop = (odiv.offsetHeight - adi[0].offsetHeight * row) / row + 1
+            for (var b = 0; b < num; b++) {
+                adi[b].style.transform = 'rotate(' + (Math.random() * 40 - 20) + 'deg)'
+//                adi[b] .style.transform = "rotate("+ (Math.random() * 40 - 20) +"deg)";
+                adi[b].style.left = adi[b].index.col * oleft + (adi[b].index.col) * adi[0].offsetWidth + 'px'
+                adi[b].style.top = (adi[b].index.row + 1) * otop + (adi[b].index.row) * adi[0].offsetHeight + 'px'
+                adi[b].style.transitionDelay = (24 - adi[b].index.index) * 100 + 'ms'
+            }
+//            adi.style.transitionDelay='0ms'
+//
+            var biaoshi = true
+            odiv.onclick = function (e) {
+
+                if (e.target != this) {
+                    var aleft = (odiv.offsetWidth - (adi[0].offsetWidth * col)) / 2
+                    var atop = (odiv.offsetHeight - (adi[0].offsetHeight * row)) / 2
+                    var aspan = odi.getElementsByTagName('span')
+
+                    if (biaoshi) {
+
+                        for (var i = 0; i < num; i++) {
+                            adi[i].style.transitionDelay = '0ms'
+                            adi[i].style.transform = 'rotate(0deg)'
+                            adi[i].style.border = '1px'
+                            adi[i].style.left = aleft + adi[i].index.col * adi[0].offsetWidth + 'px'
+                            adi[i].style.top = atop + adi[i].index.row * adi[0].offsetHeight + 'px'
+//                            aspan.style.display = 'block'
+                            aspan.style.backgroundImage='url(img/'+e.target.index.index+'.jpg)'
+
+                        }
+
+
+                    } else {
+                        for (var b = 0; b < num; b++) {
+                            adi[b].style.transform = 'rotate(' + (Math.random() * 40 - 20) + 'deg)'
+                            adi[b].style.left = adi[b].index.col * oleft + (adi[b].index.col) * adi[0].offsetWidth + 'px'
+                            adi[b].style.top = (adi[b].index.row + 1) * otop + (adi[b].index.row) * adi[0].offsetHeight + 'px'
+                            adi[b].style.border = '5px solid #fff'
+//                            aspan[b].style.display='block'
+//                            aspan[b].style.backgroundImage='img/'+ e.target.index.index+'.jpg'
+                        }
+                    }
+                    biaoshi = !biaoshi
+//                    console.log(biaoshi)
+                }
+
+            }
+        }
+
+    })()
+</script>
+</body>
+</html>
