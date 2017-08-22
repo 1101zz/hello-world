@@ -1,0 +1,51 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#zhechao {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    margin-top: 30px;
+    display: block;
+}
+
+#zhongjian {
+    width: 500px;
+    height: 500px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+
+}
+
+#title {
+    width: 100%;
+    height: 50px;
+    background: #000;
+    color: #FFFFFF;
+    line-height: 50px;
+
+}
+
+#con {
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    position: relative;
+    /*display: none;*/
+}
+#neirong{
+    height: 220px;
+    width: 100%;
+}
+#tit{
+    float: left;
+}
+#close{
+    float:right;
+}
