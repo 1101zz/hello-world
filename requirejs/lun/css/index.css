@@ -7,21 +7,21 @@ ul {
     list-style: none;
 }
 
-#container {
+.container {
     width: 680px;
     height: 344px;
-    background: #ff0000;
-    margin: 50px auto;
+    /*background: #ff0000;*/
+    /*margin: 50px auto;*/
     position: relative;
 }
 
-#tabs {
+.tabs {
     position: absolute;
     right: 10px;
     bottom: 10px;
 }
 
-#tabs li {
+.tabs li {
     width: 20px;
     height: 20px;
     background: #000000;
@@ -31,27 +31,26 @@ ul {
     margin-right: 5px;
     cursor: pointer;
 }
-
-#tabs .selected {
+.tabs .selected {
     background: orange;
     color: #ffffff;
 }
 
-#imgs img {
-    /*display: none;*/
+.imgs img {
+    display: none;
 }
 
-#imgs .selected {
+.imgs .selected {
     display: block;
 }
 
-#arrows {
+.arrows {
     position: absolute;
     left: 10px;
     bottom: 10px;
 }
 
-#arrows span {
+.arrows span {
     float: left;
     width: 20px;
     height: 20px;

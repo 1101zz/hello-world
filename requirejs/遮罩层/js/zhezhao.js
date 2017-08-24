@@ -38,9 +38,5 @@ requirejs(['jquery'], function ($) {
         })
         this.neirong.html(this.moren.neirong)
     }
-
-
     return dialog
-
-
 })

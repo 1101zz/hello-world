@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h3{
+            width: 960px;
+            height: 100px;
+            background: #cccccc;
+            color: #FFFFFF;
+            line-height: 100px;
+            text-align: center;
+        }
+        #news{
+            width: 960px;
+            display: table;
+        }
+        #left, #right{
+            height: 300px;
+            float: left;
+            text-align: center;
+            display: table;
+        }
+        #left p, #right p{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        #left{
+            width: 600px;
+            background: #00ff00;
+            margin-right: 30px;
+        }
+        #right{
+            width: 330px;
+            background: #ffff00;
+        }
+        @media (max-width: 960px) {
+            body,#contact,#news{
+                width: 100%;
+            }
+            h3{
+                width: 100%;
+            }
+            #left{
+                width: 50%;
+                margin-right: 5%;
+            }
+            #right{
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px){
+            #left,#right{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="daohang">
+    <h3>导航</h3>
+</div>
+<div id="banner">
+    <h3>忘了</h3>
+</div>
+<div id="contact">
+    <img src="1.jpg">
+</div>
+<div id="news">
+    <div id="left"><p>asdcuickjnfmlegtbdo<br>vhudb,jkfnfkmgldkbp<br>,ffoduglas<br>kjdlas,jasldkjasl,knc lahfdjkn<br>sajldlsvnmslka,jdvm dsajfl,<br>sfjnls,dljfbnhnjfvgedsdefvsd</p></div>
+    <div id="right"><p>asdcuickjnfml<br>egtbd,ovhudbjkfnfkmgl<br>dkbpffodu,glaskjdlasj<br>asldkjaslknc lahfdjk<br>nsajldlsv,nmslkajdvm ,<br>sajfldsfjnlsldl,j,bn<br>hnjfvgedsdefvsd</p></div>
+</div>
+<div id="footer">
+    <h3>页脚
+    </h3>
+</div>
+</body>
+</html>

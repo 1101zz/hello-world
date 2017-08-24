@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+        ol{
+            margin: 0 auto;
+            /*position: relative;*/
+        }
+        li{
+            width: 12%;
+            list-style: none;
+            float: left;
+            margin-left: 50px;
+            line-height: 100px;
+            /*position: absolute;*/
+        }
+        #fix{
+            width: 100%;
+            height: 100px;
+            background: #acbfdc;
+            position: fixed;
+            padding-left: 10%;
+
+
+        }
+        #top{
+            display: block;
+            width: 100%;
+        }
+        #bottom{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="top"></div>
+<div id="fix">
+    <ol>
+        <li>red</li>
+        <li>black</li>
+        <li>green</li>
+        <li>blue</li>
+        <li>orange</li>
+    </ol>
+</div>
+<div id="bottom"></div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        var a=true
+        $('li').on('click',function () {
+            if(a==true){
+                $('#fix').animate({
+                    bottom:0
+                },500
+                )
+                $('#top').animate({
+                    height:($(document).height()-100)+ 'px'
+                },500)
+                $('#bottom').animate({
+                    height: '0px'
+                },500)
+
+                $('#fix').removeAttr('style')
+                $('#top').css('background',this.innerHTML)
+                a=false
+
+//                console.log($('#fix').attr('width') )
+            }else{
+
+                $('#fix').animate({
+                    top:0,
+                },500
+
+                )
+                $('#top').animate({
+                    height: '0px'
+                },500)
+                $('#bottom').animate({
+                    height:($(document).height()-100)+'px',
+                    marginTop:100
+                },500)
+                $('#fix').removeAttr('style')
+                $('#bottom').css('background',this.innerHTML)
+                a=true
+            }
+$(document).height()
+        })
+    })
+</script>
+</body>
+</html>
+<!--bootstrap  3.0-->
+<!--respond.js-->
