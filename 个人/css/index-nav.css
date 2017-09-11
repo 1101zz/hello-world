@@ -1,0 +1,60 @@
+#fix ol{
+    margin: 0 10%;
+
+    /*position: relative;*/
+}
+#fix li{
+    width: 15%;
+    color:#ffffff;
+    list-style: none;
+    float: left;
+    line-height: 50px;
+    cursor: pointer
+    /*position: absolute;*/
+}
+#fix{
+    width: 100%;
+    height: 50px;
+    background: #D0482B;
+    position: fixed;
+    padding-left: 10%;
+
+
+}
+#top{
+    display: block;
+    width: 100%;
+}
+#bottom{
+    width: 100%;
+}
+#top iframe{
+    width: 100%;
+    height: 100%;
+}
+#bottom iframe{
+    width: 100%;
+    height: 100%;
+}
+#fix .mouseover{
+    color: black;
+    text-decoration: underline;
+}
+#selected{
+    display:none
+
+}
+@media (max-width: 600px) {
+    .select{
+        display: none;
+    }
+    #selected{
+        display: block;
+        height: 40px;
+        background: black;
+        color: #fff;
+        margin-top: 5px;
+        width: 80%;
+        padding-left: 10px;
+    }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url("img/bg/1.jpg") no-repeat;
+            background-size: cover;
+
+
+            transition: all 1s ease;
+        }
+        #bg{
+            overflow: hidden;
+            width: 100%;
+            background: url("img/bg/overlay-pattern.png");
+        }
+        #jieshao{
+            display: block;
+            margin: 20px auto;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 1px solid #ffffff;
+            overflow: hidden;
+        }
+        #ceshi{
+
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            display: table;
+        }
+        #ceshi{
+            background: #ffffff;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .its{
+            font-size: 20px;
+        }
+.name{
+    font-size: 36px;
+
+}
+#emil{
+    width: 300px;
+    margin: 0px auto;
+}
+        .icon{
+            margin-right: 20px  ;
+            margin-bottom: 200px;
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            transition: all 1s ease;
+        }
+        .icon:hover{
+            color: red;
+        }
+        #lunbo{
+            display: table;
+            width: 300px;
+            height: 130px;
+            transition: all 1s ease;
+        }
+        #lunbo p{
+            display: none;
+        }
+        #lunbo .select{
+            text-align: center;
+            /*line-height:130px;*/
+            display:table-cell ;
+            vertical-align: middle;
+            /*width: 100%;*/
+            /*height: 100%;*/
+
+        }
+        @media (max-width: 300px) {
+            #emil{
+                width: 100%;
+                margin: 0 auto;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="bg">
+<div id="jieshao"><div id="ceshi">
+    <p class="its">Hello my names is</p>
+    <p class="name">赵振达</p>
+    <div id="lunbo">
+    <p class="select">我是个前端技术爱好者<br>asldjaklsjd</p>
+    <p>去问问请问请问·</p>
+    <p>这是我的家人</p>
+    <p>请问请问我</p>
+    <p>通过个人我few</p>
+    </div>
+</div></div>
+<div id="emil">
+    <div class="icon"><i class="fa fa-camera-retro"></i></div>
+    <div class="icon"><i class="fa fa-qq"></i></div>
+    <div class="icon"></div>
+    <div class="icon"></div>
+    <div class="icon"></div>
+</div></div>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/red.js"></script>
+</body>
+</html>
