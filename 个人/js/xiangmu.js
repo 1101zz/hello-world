@@ -14,6 +14,7 @@ define(['jquery'], function ($) {
         this.$title = $('<h4></h4>')
         this.$main = $('<span></span>')
         this.df = {
+            lie:"one",
             img: "img/2.jpg",
             title: "asldjlsa",
             main: "aslkdjlaskhflksajclvnsvlavj",
@@ -22,10 +23,10 @@ define(['jquery'], function ($) {
         $.extend(this.df, xiangmu)
     }
     xiangmu.prototype.init=function () {
-        this.$hull.append("<img src='" + this.df.img + "'>").append(this.$hover).append(this.$title).append(this.$main)
+        this.$hull.append("<img src='" + this.df.img + "'>").append(this.$hover).append(this.$title).append(this.$main).append(this.$icon)
         this.$title.append(this.df.title)
         this.$main.append(this.df.main)
-        this.$hover.append(this.$icon)
+        // this.$hover.append(this.$icon)
         $("#a").append(this.$hull)
         $(this.$hover).on('mouseover', function (   ) {
             console.log(this)
@@ -40,7 +41,7 @@ define(['jquery'], function ($) {
             console.log(this)
             $(this.$hover).animate({opacity:0},10)
             $(this.$icon).stop().animate({
-                opacity:1,
+                opacity:0,
                 margin:"0 -50px",
             },10)
             // console.log(this.$prev)

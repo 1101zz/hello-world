@@ -35,20 +35,31 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
     }
     var asd=new xiangmu(shuxing)
     asd.init()
-    // var shuxing1={
-    //     img:"img/6.jpg",
-    //     title:"asldjlsa",
-    //     main:"aslkdjlaskhflksajclvnsvlavj",
-    //     shuxing:"asd"
-    // }
-    // var asd1=new xiangmu(shuxing1)
-    // asd1.init()
-    // var shuxing2={
-    //     img:"img/5.jpg",
-    //     title:"asldjlsa",
-    //     main:"aslkdjlaskhflksajclvnsvlavj",
-    //     shuxing:"asd"
-    // }
-    // var asd2=new xiangmu(shuxing2)
-    // asd2.init()
+    var shuxing1={
+        lie:"one",
+        img:"img/4.jpg",
+        title:"asldjlsa",
+        main:"aslkdjlaskhflksajclvnsvlavj",
+        shuxing:"asd"
+    }
+    var asd1=new xiangmu(shuxing1)
+    asd1.init()
+    var shuxing2={
+        lie:"one",
+        img:"img/5.jpg",
+        title:"asldjlsa",
+        main:"aslkdjlaskhflksajclvnsvlavj",
+        shuxing:"asd"
+    }
+    var asd2=new xiangmu(shuxing2)
+    asd2.init()
+    var shuxing3={
+        lie:"one",
+        img:"img/4.jpg",
+        title:"asldjlsa",
+        main:"aslkdjlaskhflksajclvnsvlavj",
+        shuxing:"asd"
+    }
+    var asd3=new xiangmu(shuxing2)
+    asd3.init()
 })
