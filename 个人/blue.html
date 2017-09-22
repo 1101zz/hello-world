@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        ol{display: block ;
+            width: 33%;
+        float:left;
+        margin: 0;
+        padding:0}
+        li{list-style: none}
         body{
             background:blue;
         }
 .xiangmu{
     background:black;
-    width: 33%;
+    width: 100%;
     overflow: hidden;
     position: relative;
-    float: left;
+    float: right;
     transition: all 1s ease;
         }
         .xiangmu img{
@@ -61,11 +67,15 @@
         @media (max-width: 900px) {
             .xiangmu{
                 background:black;
-                width: 50%;
+                width: 100%;
                 overflow: hidden;
                 position: relative;
                 float: left;
                 transition: all 1s ease;
+            }
+            ol{
+                display: block;
+                width:50%;
             }
         }
         @media (max-width: 400px) {
@@ -77,11 +87,18 @@
                 float: left;
                 transition: all 1s ease;
             }
+            ol{
+                display: block;
+                width:100%;
+            }
         }
 
     </style>
 </head>
 <body>
+<ol id="one"></ol>
+<ol id="two"></ol>
+<ol id="three"></ol>
 <!--<div class="xiangmu">-->
 <!--<img src="img/7.jpg">-->
 <!--<h4>aslkdjlas</h4>-->
@@ -95,9 +112,6 @@
 <!--<h4>aslkdjlas</h4>-->
 <!--<span>alksjflakjdgasdsfghjhkl;kjhgrfwswefrgtyujkjhgredsaSDEFRGTYUIYGRFDShlh</span>-->
 <!--<div class="hover">  <span class="icon"></span></div>-->
-<div id="a">
-
-</div>
 <script src="js/jquery-1.12.4.js"></script>
 <script src="js/require.js" data-main="js/blue"></script>
 <!--<script src="js/blue.js"></script>-->
