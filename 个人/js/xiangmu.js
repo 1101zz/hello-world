@@ -23,31 +23,37 @@ define(['jquery'], function ($) {
         }
         $.extend(this.df, xiangmu)
     }
-    i=0;
+    var $one
+    var $two
+    var $three
     xiangmu.prototype.init=function () {
-
-        i++;
-        console.log(i)
         this.$hull.append("<img src='" + this.df.img + "'>").append(this.$hover).append(this.$title).append(this.$main).append(this.$icon)
         this.$title.append(this.df.title)
         this.$main.append(this.df.main)
-        // this.$hover.append(this.$icon)
         this.$li.append(this.$hull)
-        // $("#one").append(this.$li)
+        $one=$("#one").height()
+        $two=$("#two").height()
+        $three=$("#three").height()
         if($(window).width()>900){
-            if(i%3==1){
+            if($one<$two&&$one<$three){
                 $("#one").append(this.$li)
-            }else if(i%3==2){
+            }else if($two<$one&&$two<$three){
+                $("#two").append(this.$li)
+            }else if($three<$one&&$three<$two){
+                $("#three").append(this.$li)
+            }else if($one==$two && $one==$three){
+                $("#one").append(this.$li)
+            }else if($one!=$two && $two==$three){
                 $("#two").append(this.$li)
             }else{
                 $("#three").append(this.$li)
             }
         }
         if($(window).width()<900&&$(window).width()>400){
-            if(i%2==1){
+            if($one<=$two){
                 $("#one").append(this.$li)
             }
-            else{
+            else {
                 $("#two").append(this.$li)
             }
         }
@@ -72,6 +78,12 @@ define(['jquery'], function ($) {
             },10)
             // console.log(this.$prev)
         }.bind(this))
+
     }
+
     return xiangmu
+
 })
+// window.addEventListener('resize',function () {
+//     i=0;
+//     this.init();

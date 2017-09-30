@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Title</title>
     <style>
         #a,#c{
@@ -26,6 +29,17 @@
             top: 0;
             z-index:-1 ;
         }
+        @media (max-width:900px ) {
+            #d{
+                background: url("img/parallax2.jpg");
+                width: 1000px;
+                background-size:contain;
+                background-repeat: no-repeat;
+                position: fixed;
+                top: 0;
+                z-index:-1 ;
+            }
+        }
     </style>
 </head>
 <body>
@@ -34,9 +48,9 @@
 <div id="b">2</div>
 <div id="c">3</div>
 
+
 <script src="js/jquery-1.12.4.js"></script>
 <script>
-
     $(function () {
         $('#d').css('height',$(document).height())
     })

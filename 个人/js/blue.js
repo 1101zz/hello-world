@@ -27,6 +27,10 @@ requirejs.config({
     }
 });
 requirejs(["jquery","xiangmu"],function ($,xiangmu) {
+    $(window).resize(function () {
+        $("#one").children().remove()
+        $("#two").children().remove()
+        $("#three").children().remove()
     var shuxing={
         img:"img/4.jpg",
         title:"asldjlsa",
@@ -64,7 +68,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
     asd3.init()
     var shuxing4={
         lie:"one",
-        img:"img/5.jpg",
+        img:"img/4.jpg",
         title:"asldjlsa",
         main:"aslkdjlaskhflksajclvnsvlavj",
         shuxing:"asd"
@@ -91,11 +95,20 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
     asd6.init()
     var shuxing7={
         lie:"one",
-        img:"img/5.jpg",
+        img:"img/4.jpg",
         title:"asldjlsa",
         main:"aslkdjlaskhflksajclvnsvlavj",
         shuxing:"asd"
     }
     var asd7=new xiangmu(shuxing7)
     asd7.init()
-})
+    var shuxing8={
+        lie:"one",
+        img:"img/3.jpg",
+        title:"asldjlsa",
+        main:"aslkdjlaskhflksajclvnsvlavj",
+        shuxing:"asd"
+    }
+    var asd8=new xiangmu(shuxing8)
+    asd8.init()
+})})

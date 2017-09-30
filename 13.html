@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="aa">1</div>
+<div class="aa bb">2</div>
+<div class="aabb">3</div>
+<!--<script src="个人/js/jquery-1.12.4.js"></script>-->
+<script>
+
+//function ac(classname) {
+//    var a=[];
+//    var rag=new RegExp("//b"+classname+"//b")
+//    var t=document.getElementsByTagName("div")
+//    for(i=0;i<t.length;i++){
+//       if(rag.test(t[i].className)){
+//           a.push(t[i]);
+//       }
+//
+//    }
+//    return a
+//
+//}
+//ac("aa")
+window.onload=function () {
+
+    function getByClass(classname, context) {
+        context = context || document;
+//    if (context.getElementsByClassName) {
+//        return context.getElementsByClassName(className);
+//    } else {
+        var reg=new RegExp("\\b"+classname+"\\b")
+        var result = [];
+        var arr = context.getElementsByTagName('*');
+        for (var i = 0; i < arr.length; i++) {
+            //arr[i].className = "aa bb"
+            if (reg.test(arr[i].className)) {
+                result.push(arr[i]);
+            }
+        }
+        console.log(arr)
+        return result;
+
+    }
+    console.log(getByClass('aa'))
+}
+
+
+</script>
+</body>
+</html>

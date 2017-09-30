@@ -57,4 +57,17 @@
         width: 80%;
         padding-left: 10px;
     }
+    #selected option{
+        display: block;
+        width: 10px;
+    }
+    /*#selected option{*/
+        /*display: block;*/
+        /*height: 40px;*/
+        /*background: black;*/
+        /*color: #fff;*/
+        /*margin-top: 5px;*/
+        /*width: 80%;*/
+        /*padding-left: 10px;*/
+    /*}*/
 }
