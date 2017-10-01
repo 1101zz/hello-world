@@ -3,6 +3,7 @@
  */
 $(function () {
         var i = 1
+        var a=true
         // $("#empty").css("height",$(window).height-$("#bg").height())
         $('#bg').css('height',$(window).height)
         $('#bg').css('width',$(window).width)
@@ -16,6 +17,7 @@ $(function () {
                 i = 1
             }
         }, 2000)
+
     $(".icon").on("click",function (e) {
         var ind;
         if(e.target.className=="icon"){
@@ -23,6 +25,7 @@ $(function () {
             console.log(ind)
         }else{ind=$('#emil .icon').index($(e.target).parent())
         console.log(ind)}
+        if(a==true){
            $("#text").find("div").eq(ind).animate({
                opacity:1,
                zIndex:999
@@ -30,6 +33,16 @@ $(function () {
                opacity:0,
                zIndex:-1
            },1000)
+            a=false
+            }else{
+               $("#text").find("div").animate({
+                   opacity:0,
+                   zIndex:-1
+               },1000)
+               a=true
+           }
+           console.log(a)
+
     }
 )
     $(".aa").on("click",function () {
@@ -37,4 +50,5 @@ $(function () {
           opacity:0,
           zIndex:-1
       },1000)
+        a=true
     })})
