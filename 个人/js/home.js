@@ -4,14 +4,11 @@
 $(function () {
         var i = 1
         var a=true
-        // $("#empty").css("height",$(window).height-$("#bg").height())
         $('#bg').css('height',$(window).height)
         $('#bg').css('width',$(window).width)
         setInterval(function () {
             $('#lunbo p').eq(i-1).addClass('select').siblings().removeClass('select')
             $('body').css('background', 'url(img/bg/' + i + '.jpg) no-repeat')
-            // $('body').css('background-size', "100%")
-            // $('body').css('height', window.height+"px")
             i++
             if (i == 6) {
                 i = 1
@@ -23,8 +20,7 @@ $(function () {
         if(e.target.className=="icon"){
             ind = $('#emil .icon').index(this)
             console.log(ind)
-        }else{ind=$('#emil .icon').index($(e.target).parent())
-        console.log(ind)}
+        }else{ind=$('#emil .icon').index($(e.target).parent())}
         if(a==true){
            $("#text").find("div").eq(ind).animate({
                opacity:1,
@@ -41,7 +37,6 @@ $(function () {
                },1000)
                a=true
            }
-           console.log(a)
 
     }
 )

@@ -1,58 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        .i{
-            width: 50px;
-            height: 50px;
-            position: relative;
-        }
-        span{
-            background: red;
-            width: 40px;
-            height: 40px;
-            position: absolute;
-            top: 50px;
-            margin-top:-20px;
-            left:50px;
-            margin-left: -20px;
-            border-radius: 50%;
-            line-height: 40px;
-            text-align: center;
+    <style type="text/css">
+        #myCanvas{
+            margin: 0 auto;
+            display: block;
         }
     </style>
 </head>
 <body>
-<div class="i">
-   <span id="c"></span>
-    <canvas id="canvas"></canvas>
-</div>
-<script src="个人/js/jquery-1.12.4.js"></script>
-<script>
-    $(function () {
-    var a=0
-        setInterval(function () {
-               if(a<30){
-                a++
-            }
-            $("#c").text(a+"%")
+<canvas id="myCanvas">当前浏览器不支持canvas组件请升级！</canvas>
 
-
-        },50)
-
-    var c = document.getElementById('canvas');
-    console.log(c)
+<script type="text/javascript">
+    //方法二：rotate() 动态画圆
+    var c = document.getElementById('myCanvas');
     var ctx = c.getContext('2d');
 
-    var mW = c.width = 100;
-    var mH = c.height =100;
-    var lineWidth =20;
+    var mW = c.width = 400;
+    var mH = c.height = 400;
+    var lineWidth = 5;
     var r = mW / 2; //中间位置
-    var cR = r-10; //圆半径
+    var cR = r - 2* lineWidth; //圆半径
     var startAngle = (0); //开始角度
-    var endAngle = startAngle + 2*0.3* Math.PI; //结束角度
+    var endAngle = startAngle + 2* Math.PI; //结束角度
     var xAngle = 1* (Math.PI / 180); //偏移角度量//速度
     var fontSize = 35; //字号大小
     var tmpAngle = startAngle; //临时角度变量
@@ -86,7 +57,7 @@
         requestAnimationFrame(rander);
     };
 
-    rander();  })
+    rander();
 </script>
 </body>
 </html>

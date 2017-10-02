@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <style>
         #i {
@@ -13,44 +15,32 @@
             display: block;
             background-size: cover;
         }
-
         .shadow {
-            background: url("img/bg/overlay-pattern.png");
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-
-        #skill {
-            height: 1000px;
-        }
+             background: url("img/bg/overlay-pattern.png");
+             width: 100%;
+             height: 100%;
+             position: relative;
+         }
         #me{
-            position: absolute;
-            margin-top:50px;
-            /*margin-right:10%;*/
-            right: 0;
-            width: 50%;
-        }
+                      position: absolute;
+                      margin-top:50px;
+                      /*margin-right:10%;*/
+                      right: 0;
+                      width: 50%;
+                  }
         #me p {
             display: block;
             color: white;
             font-size: 16px;
         }
-
-        #me h2 {
-            display: block;
-            color: white;
-            font-size: 50px;
-
-            text-align: center;
-        }
         #me ul{
-            display:inline-block;
-            width: 100%;
-            height: 100px;
-            text-align: center;
-            list-style-type: disc;
-        }
+                     margin-top:20px;
+                     display:inline-block;
+                     width: 100%;
+                     height: 100px;
+                     text-align: center;
+                     list-style-type: disc;
+                 }
         #me li{
             display: inline-block;
             list-style: none;
@@ -60,16 +50,108 @@
             border-radius: 50%;
             line-height: 100px;
             /*padding-top: 20px;*/
-            background: #FFFFFF;
             transition: all 0.4s ease-out 0s;
             background: rgb(50,50,50);
             color: #FFFFFF;
         }
+        #hover li:hover{
+            background:  #FFFFFF;
+            color:rgb(50,50,50)
+        }
+        #me h2::after,#experiences h2::after {
+             content: '';
+             width: 10px;
+             height: 10px;
+             -webkit-transform: rotate(45deg);
+             -moz-transform: rotate(45deg);
+             -ms-transform: rotate(45deg);
+             -o-transform: rotate(45deg);
+             transform: rotate(45deg);
+             display: block;
+             position: absolute;
+             bottom: -6px;
+             background: #ffffff;
+         }
+        #me h2,#experiences h2  {
+                      display: block;
+                      color: white;
+                      font-size: 50px;
+                      padding:20px 0 20px 0 ;
+                      text-align: center;
+                      position: relative;
+                      border-bottom: 1px solid #FFFFFF;
+                      margin-bottom: 20px;
+                  }
+        #experiences h2::after{
+            background: black;
+            left: 50%;
+            margin-left: -5px;
+        }
+        #experiences {
+            background: #ffffff;
+            width: 80%;
+            margin: 30px 10% 0 10%;
+        }
+        .experience{
+            width: 600px;
+            margin: auto;
+        }
+        #experiences h2  {
+            color: black;
+            width: 400px;
+            height: 44px;
+            font-size: 44px;
+            margin: auto;
+            padding:15px 0 15px 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid black;
+        }
+        #experiences p{
+            font-size: 15px;
+            text-align: center;
+        }
+       .row{
+           width: 50%;
+           display: block;
+           float: left;
+       }
         @media (max-width: 900px) {
         #me{
-            width: 100%;
+            width: 80%;
+            margin-right: 10%;
+            margin-left: 10%;
         }
 
+        }
+        @media (max-width: 620px){
+            .experience{
+                width: 100%;
+            }
+            #experiences{
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+        @media (max-width: 540px) {
+            #me li{
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+                font-size: 10px;
+            }
+            #experiences h2{
+                width: 100%;
+                font-size: 30px;
+            }
+        }
+        @media (max-width: 340px){
+            #me li{
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 5px;
+            }
         }
     </style>
 </head>
@@ -84,12 +166,8 @@
             ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
             nulla pariatur.a
         </p><br>
-        <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum.
-        </p>
-            <ul>
+
+            <ul id="hover">
                 <li>asdbknb</li>
                 <li>qwdsfav</li>
                 <li>qwdfdsk</li>
@@ -97,7 +175,18 @@
         </div>
     </div>
 </div>
-<div id="skill">
+<div id="experiences">
+
+<div class="experience">
+    <h2> EXPERIENCES   </h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, se
+        d do eiusmod tempor incididunt ut labore et dol
+        ore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+    <div class="row">asdawfscfeedvd</div>
+    <div class="row">qwdfs</div>
+    <div class="row">qwdefsdgthddwe</div>
+    <div class="row">asddfgffdsxef</div>
+</div>
 
 
 </div>

@@ -69,6 +69,15 @@ define(['jquery'], function ($) {
             },10)
             // console.log(this.$prev)
         }.bind(this))
+        $(this.$icon).on('mouseover', function (   ) {
+            console.log(this)
+            $(this.$hover).animate({opacity:0.6},10)
+            $(this.$icon).stop().animate({
+                opacity:1,
+                margin:"-50px -50px",
+            },10)
+            // console.log(this.$prev)
+        }.bind(this))
         $(this.$hover).on('mouseout', function () {
             console.log(this)
             $(this.$hover).animate({opacity:0},10)
@@ -78,6 +87,7 @@ define(['jquery'], function ($) {
             },10)
             // console.log(this.$prev)
         }.bind(this))
+
 
     }
 

@@ -29,6 +29,24 @@
             top: 0;
             z-index:-1 ;
         }
+        .i{
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        .e{
+            background: red;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 50px;
+            margin-top:-20px;
+            left:50px;
+            margin-left: -20px;
+            border-radius: 50%;
+            line-height: 40px;
+            text-align: center;
+        }
         @media (max-width:900px ) {
             #d{
                 background: url("img/parallax2.jpg");
@@ -50,6 +68,7 @@
 
 
 <script src="js/jquery-1.12.4.js"></script>
+<script src="js/require.js" data-main="js/black"></script>
 <script>
     $(function () {
         $('#d').css('height',$(document).height())
