@@ -1,4 +1,5 @@
 $(function () {
+    $("#bottom").height=$(document).height()-50+"px"
     var a=true
     $('li').on('click',function () {
         if(a==true){

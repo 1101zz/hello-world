@@ -1,0 +1,263 @@
+#i {
+    background-image: url("../img/bg/3.jpg");
+    background-repeat: no-repeat;
+    /*width: 1080px;*/
+    height: 653px;
+    display: block;
+    background-size: cover;
+}
+.shadow {
+    background: url("../img/bg/overlay-pattern.png");
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#me{
+    position: absolute;
+    margin-top:50px;
+    /*margin-right:10%;*/
+    right: 0;
+    width: 50%;
+}
+#me p {
+    display: block;
+    color: white;
+    font-size: 16px;
+}
+#me ul{
+    margin-top:20px;
+    display:inline-block;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    list-style-type: disc;
+}
+#me li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    line-height: 100px;
+    /*padding-top: 20px;*/
+    transition: all 0.4s ease-out 0s;
+    background: rgb(50,50,50);
+    color: #FFFFFF;
+}
+#hover li:hover{
+    background:  #FFFFFF;
+    color:rgb(50,50,50)
+}
+#me h2::after,#experiences h2::after,.left h2::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: block;
+    position: absolute;
+    bottom: -6px;
+    background: #ffffff;
+}
+#me h2,#experiences h2  {
+    display: block;
+    color: white;
+    font-size: 50px;
+    padding:20px 0 20px 0 ;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 20px;
+}
+#experiences h2::after{
+    background: black;
+    left: 50%;
+    margin-left: -5px;
+}
+.left h2::after{
+    background: black;
+    left: 0;
+    margin-left: -5px;
+}
+.left h2{
+    position: relative;
+    margin-bottom:-1px;
+    width:100%;
+    border-bottom: 1px solid black  ;
+    padding:10px 0 10px 0;
+}
+#experiences {
+    background: #ffffff;
+    width:80%;
+    margin: 30px 10% 40px 10%;
+    /*margin-bottom: 20px;*/
+    /*border-bottom:2px solid #aaaaaa;*/
+}
+.experience{
+    width: 80%;
+    margin: auto;
+}
+#experiences h2  {
+    color: black;
+    width: 400px;
+    height: 44px;
+    font-size: 44px;
+    margin: auto;
+    padding:15px 0 15px 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+}
+#asd{
+    display: table;
+}
+.row{
+    display: table-cell;
+    width: 50%;
+    /*height: 200px;*/
+    float: left;
+    /*margin-right   : 0;*/
+    margin-top:30px;
+}
+.row img{
+    float: left;
+}
+.title{
+    margin-left:156px;
+}
+.num{
+    background: #aaaaaa;
+}
+.trr{
+    margin-top: 10px;
+}
+#services{
+
+    width: 100%;
+    border-top:2px solid #aaaaaa;
+    background: #aaaaaa;
+    position: relative;
+}
+.left{  width: 40%  ;
+    float: left  ;
+    margin-top: 50px;
+    margin-left: 10%  ;
+    text-align: right  ;
+    position:relative }
+#services .left p{
+    display: block;
+    margin: 10px 0 10px 0;
+}
+.right{
+    margin-top: 50px;
+    width: 40%  ;
+    float: left  ;
+    margin-right: 10%;
+    text-align: left;
+}
+.rig{
+    padding-top: 20px;
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    padding-left: 10%;
+    /*background: #000;*/
+    /*float:right ;*/
+    position: relative;
+    border-left: 1px dashed black;
+
+}
+.rig h3{
+    font-size: 15px;
+}
+.rig p{
+    font-size: 14px;
+}
+.rig .img{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    background: #ffff00;
+    color: #0f79bb;
+    line-height: 40px;
+    position: absolute;
+    left:-20px;
+    top:20px;
+}
+@media (max-width: 900px) {
+    #me {
+        width: 80%;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    .experience{
+        width: 100%;
+    }
+}
+
+@media (max-width: 620px){
+
+    #experiences{
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+@media (max-width: 540px) {
+    #me li{
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        font-size: 10px;
+    }
+    #experiences h2{
+        width: 100%;
+        font-size: 30px;
+    }
+    .row{
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+    .row img{
+        float: none;
+    }
+    .row p{
+        text-align: center;
+    }
+    .title{
+        margin-left: 0;
+        float: left;
+    }
+    .left{width: 80%  ;
+        float: left  ;
+        margin-left: 10%  ;
+        margin-right: 10%;
+        text-align: right  ;
+        position: relative}
+    .left p{
+        margin: 10px 0 10px 0;
+    }
+    .right{
+        width: 80%  ;
+        float: left  ;
+        margin-right: 10%;
+        margin-left: 10%;
+        text-align: left;
+    }
+
+
+}
+@media (max-width: 340px){
+    #me li{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 5px;
+    }
+}
