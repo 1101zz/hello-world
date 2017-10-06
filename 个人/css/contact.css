@@ -1,0 +1,116 @@
+body{
+    background: green;
+}
+#gray{
+    display: block;
+    width: 100%;
+    height: 200px;
+    background: #000;
+}
+#lianxifangshi{
+    display: block;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background: #aaaaaa;
+}
+#tel{
+    display: table;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 40px;
+}
+.ico{
+    display: block;
+    width: 50%;
+    /*float: left;*/
+    border-radius: 50%;
+    background: #2a8c70;
+    margin: 0 auto;
+
+}
+.fangshi,.fangshi1{
+    display: table-cell;
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+.fangshi1{
+    margin: 0 5%;
+}
+#form{
+    display: table;
+    width: 100%;
+    background: #000;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.danhang{
+    display: table-cell;
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
+
+}
+.duohang{
+    width: 90%;
+    padding: 10px;
+    margin-top: 20px;
+    height: 80px;
+}
+.for{
+    width: 80%;
+    margin: 0 auto;
+}
+.send{
+    margin-top: 20px;
+    width: 100%;
+    height: 39px;
+    background: #D0482B;
+    color: white;
+    transition: all 1s ease;
+    border: 0;
+}
+.send:hover{
+
+    background:white ;
+    color: #D0482B;
+}
+.small{
+    display: none;
+}
+.small tr{
+    width: 100%;
+}
+@media (max-width: 700px) {
+    .small{
+        display: block;
+    }
+    .danhang,.duohang,.send{
+        width: 80%;
+        margin-left: 10%}
+    .send{
+        width: 83%;
+    }
+    .for{
+        display: none;
+    }
+}
+@media (max-width: 400px) {
+    .fangshi,.fangshi1{
+        width: 100%;
+    }
+    .fangshi1{
+        margin: 0;
+    }
+    .ico{
+        width: 20%;
+        float: left;
+    }
+    .fangshi p,.fangshi1 p{
+        margin-left: 20%;
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,195 @@
+
+#skills{
+    padding-top: 50px;
+    width: 100%;
+    background: #4a504f;
+    z-index: 999;
+    color:white;
+    text-align: center;
+
+}
+#skil,#youdian{
+    display: table;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+}
+.ski,.dian,.dian1{
+    display: table-cell;
+    width: 50%;
+    float: left;
+    position: relative;
+    margin-bottom: 50px;
+
+}
+.dian1{
+    float: right;
+    text-align: right;
+}
+.true{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.true1{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.dian{
+    width: 45%;
+    margin-right: 5%;
+    height: 60px;
+    line-height: 60px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    position: relative;
+}
+.dian1{
+    width: 45%;
+    margin-left: 5%;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 60px;
+    box-sizing: border-box;
+    position: relative;
+}
+#z,#x,#s,#v{
+    display: block;
+    width: 100px;
+    margin-bottom: auto;
+}
+#z,#s{
+    float: right;
+    position: absolute;
+    right: 0;
+}
+
+#v,#x{
+    float: left;
+    position: absolute;
+    left: 0;
+}
+.text{
+    padding-right:100px ;
+    float: left;
+    display: block;
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.text p{
+    display: block;
+    width: 100%;
+    /*margin-left: 10%;*/
+    /*margin-right: 10%;*/
+    text-align: right;
+}
+.text1{
+    float: left;
+    display: block;
+    padding-left:100px ;
+    /*width: 100%;*/
+    /*margin-right:100px;*/
+    overflow: hidden;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.text1 p{
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: left;
+}
+
+
+#b{
+    width: 100%;
+    padding-top: 50px;
+    z-index: 999;
+    background: url('../img/bg/overlay-pattern.png')
+}
+#d{
+    background: url("../img/parallax2.jpg") no-repeat;
+    width: 100%;
+    background-size:contain;
+    position: fixed;
+    top: 0;
+    z-index:-1 ;
+}
+.i{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.e{
+    background: white;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50px;
+    margin-top:-20px;
+    left:50px;
+    margin-left: -20px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    color: black;
+}
+#c{
+    display:block;
+    width: 100%;
+    background: rgba(69, 69, 69, 1);
+    padding-top:30px ;
+}
+#biao{
+    height: 300px;
+    display: block;
+    padding-left:5% ;
+    padding-right: 5%;
+}
+#biao li{
+    float: left;
+    display: block;
+    width: 13%;
+    height: 100%;
+    margin-left: 2%;
+    background: #ffff00;
+}
+@media (max-width:900px ) {
+    #d{
+        background: url("../img/parallax2.jpg") no-repeat;
+        width: 1100px;
+        background-size:contain;
+        position: fixed;
+        top: 0;
+        z-index:-1 ;
+    }
+}
+@media (max-width: 700px) {
+    #skil{
+        margin: 50px 0 0 0  ;
+        width: 100%;
+    }
+    .ski{
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    .dian,.dian1{
+        width: 100%;
+    }
+}

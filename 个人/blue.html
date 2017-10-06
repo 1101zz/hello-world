@@ -23,6 +23,7 @@
     position: relative;
     float: right;
     transition: all 1s ease;
+    display: block;
         }
         .xiangmu img{
             width: 100%;
@@ -67,6 +68,47 @@
             word-break: break-all;
             word-wrap: break-word;
         }
+        #xiangmu{
+            display: block;
+            width: 80%;
+        margin: 0 auto;
+        }
+        #icon{
+                     display: block;
+                     width: 80%;
+                     margin: 0 auto;
+                 }
+        #icon ol{
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        #icon li{
+            /*display: inline-block;*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*border-radius: 50%;*/
+            /*background: #000;*/
+            /*margin: 0 auto;*/
+            /*float: left;*/
+            /*color: white;*/
+            /*transition: all 1s ease;*/
+            display: inline-block;
+            list-style: none;
+            margin: 0 30px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            line-height: 100px;
+            /*padding-top: 20px;*/
+            transition: all 0.4s ease-out 0s;
+            background: rgb(50,50,50);
+            color: #FFFFFF;
+        }
+        #icon li:hover{
+            background: white;
+            color: black;
+        }
         @media (max-width: 900px) {
             .xiangmu{
                 background:black;
@@ -81,6 +123,7 @@
                 width:50%;
             }
         }
+
         @media (max-width: 400px) {
             .xiangmu{
                 background:black;
@@ -94,14 +137,52 @@
                 display: block;
                 width:100%;
             }
+            #icon li{
+                /*display: inline-block;*/
+                /*width: 100px;*/
+                /*height: 100px;*/
+                /*border-radius: 50%;*/
+                /*background: #000;*/
+                /*margin: 0 auto;*/
+                /*float: left;*/
+                /*color: white;*/
+                /*transition: all 1s ease;*/
+                display: inline-block;
+                list-style: none;
+                margin: 0 15px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                line-height: 100px;
+                /*padding-top: 20px;*/
+                transition: all 0.4s ease-out 0s;
+                background: rgb(50,50,50);
+                color: #FFFFFF;
+            }
         }
 
     </style>
 </head>
 <body>
+<div class="tit">
+    <h1>Coding Skills</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. </p>
+</div>
+<div id="icon">
+    <ol>
+        <li>123</li>
+        <li>456</li>
+        <li>789</li>
+        <li>html5</li>
+        <li>asdjaskl</li></ol>
+</div>
+<div id="xiangmu">
 <ol id="one"></ol>
 <ol id="two"></ol>
 <ol id="three"></ol>
+</div>
 <!--<div class="xiangmu">-->
 <!--<img src="img/7.jpg">-->
 <!--<h4>aslkdjlas</h4>-->
@@ -119,10 +200,10 @@
 <script src="js/require.js" data-main="js/blue"></script>
 <!--<script src="js/blue.js"></script>-->
 <script>
-    $(window).resize(function () {
-        $("#one").children().remove()
-        $("#two").children().remove()
-        $("#three").children().remove()
+    $(function () {
+//        $("#icon li").css("marginRight",($("#icon ol").width()-500)/11)
+//        $("#icon li").css("marginLeft",($("#icon ol").width()-500)/11)
+
     })
 </script>
 </body>

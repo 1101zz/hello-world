@@ -28,24 +28,25 @@ define(['jquery'], function ($) {
         var a=0
         var b=this.df.baifenbi
         var g=this.$index
+
         setInterval(function () {
             if(a<b){
                 a++
             }
             $(".e").eq(g).text(a+"%")
      console.log(this.$index)
-        },50)
+        },1000/b)
         var c = document.getElementsByClassName("canvas")[i];
         i++
         var ctx = c.getContext('2d');
         var mW = c.width = 100;
         var mH = c.height =100;
-        var lineWidth =20;
+        var lineWidth =10;
         var r = mW / 2;
-        var cR = r-10;
+        var cR = r-20;
         var startAngle = (0);
         var endAngle = startAngle + 2*this.df.baifenbi/100* Math.PI;
-        var xAngle = 1* (Math.PI / 180);
+        var xAngle =this.df.baifenbi/15 * (Math.PI / 180);
         var tmpAngle = startAngle;
         var rander = function(){
             if(tmpAngle >= endAngle){
@@ -58,11 +59,11 @@ define(['jquery'], function ($) {
             ctx.save();
             ctx.beginPath();
             ctx.lineWidth = lineWidth;
-            ctx.strokeStyle = '#1c86d1';
+            ctx.strokeStyle = '#D0482B';
             ctx.translate(r, r);
             ctx.rotate(-Math.PI);
             for(var i = 0; i <= tmpAngle - startAngle; i += xAngle){
-                ctx.moveTo(0, cR - lineWidth);
+                ctx.moveTo(0, cR - 10);
                 ctx.lineTo(0, cR);
                 ctx.rotate(xAngle);
             }

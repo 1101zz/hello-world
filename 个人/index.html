@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Title</title>
-    <script src="js/html5.js" type="text/javascript"></script>
+    <script src="js/html5.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index-nav.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -16,25 +16,30 @@
     <ol class="select">
         <li>home</li>
         <li>about</li>
-        <li>black</li>
-        <li>green</li>
+        <li>skill</li>
         <li>blue</li>
-
+        <li>contact</li>
     </ol>
-    <select id="selected">
-        <option value="home">home</option>
-        <option value="about">about</option>
-        <option value="black">black</option>
-        <option value="green">green</option>
-        <option value="blue">blue</option>
+        <select id="selected">
+          <option value="home">home</option>
+          <option value="about">about</option>
+           <option value="skill">skill</option>
+          <option value="blue">blue</option>
+            <option value="contact">contact</option>
         </select>
-
 </div>
 <div id="bottom"><iframe src="home.html" ></iframe></div>
 <script src="js/jquery-1.12.4.js"></script>
 <script src="js/nav.js"></script>
 </body>
-<script src="js/excanvas.js" type="text/javascript"></script>
+<script src="js/excanvas.js" type="text/javascript"></script>
+<script>
+    $(function () {
+        $("#bottom").height($(document).height())
+
+    })
+</script>
+
 </html>
 <!--bootstrap  3.0-->
 <!--respond.js-->

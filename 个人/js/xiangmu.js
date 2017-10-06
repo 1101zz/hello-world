@@ -88,7 +88,17 @@ define(['jquery'], function ($) {
             // console.log(this.$prev)
         }.bind(this))
 
-
+         $("#icon li").on("click",function (e) {
+       // if(this.df.shuxing.indexOf("asd")==false){
+       //    this.$hull.attr("display","none")
+       // }
+           if(this.df.shuxing.indexOf($(e.target).html())==-1){
+               this.$hull.hide()
+           }else{
+               this.$hull.show()
+           }
+         }.bind(this))
+      // $(window).resize()
     }
 
     return xiangmu
