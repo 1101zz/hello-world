@@ -8,35 +8,35 @@ requirejs.config({
 });
 define(['jquery'], function ($) {
     function xiangmu(xiangmu) {
-        this.$li=$("<li></li>")
-        this.$hull = $("<div class='xiangmu'></div>")
-        this.$hover = $('<div class="hover"></div>')
-        this.$icon=$('<span class="icon"></span>')
-        this.$title = $('<h4></h4>')
-        this.$main = $('<span></span>')
+        this.$li=$("<li></li>");
+        this.$hull = $("<div class='xiangmu'></div>");
+        this.$hover = $('<div class="hover"></div>');
+        this.$icon=$('<span class="icon"></span>');
+        this.$title = $('<h4></h4>');
+        this.$main = $('<span></span>');
         this.df = {
             lie:"one",
             img: "img/2.jpg",
             title: "asldjlsa",
             main: "aslkdjlaskhflksajclvnsvlavj",
             shuxing: "asd"
-        }
-        $.extend(this.df, xiangmu)
+        };
+        $.extend(this.df, xiangmu);
     }
-    var $one
-    var $two
-    var $three
+    var $one;
+    var $two;
+    var $three;
     xiangmu.prototype.init=function () {
-        this.$hull.append("<img src='" + this.df.img + "'>").append(this.$hover).append(this.$title).append(this.$main).append(this.$icon)
-        this.$title.append(this.df.title)
-        this.$main.append(this.df.main)
-        this.$li.append(this.$hull)
-        $one=$("#one").height()
-        $two=$("#two").height()
-        $three=$("#three").height()
+        this.$hull.append("<img src='" + this.df.img + "'>").append(this.$hover).append(this.$title).append(this.$main).append(this.$icon);
+        this.$title.append(this.df.title);
+        this.$main.append(this.df.main);
+        this.$li.append(this.$hull);
+        $one=$("#one").height();
+        $two=$("#two").height();
+        $three=$("#three").height();
         if($(window).width()>900){
             if($one<$two&&$one<$three){
-                $("#one").append(this.$li)
+                $("#one").append(this.$li);
             }else if($two<$one&&$two<$three){
                 $("#two").append(this.$li)
             }else if($three<$one&&$three<$two){
@@ -61,22 +61,18 @@ define(['jquery'], function ($) {
                 $("#one").append(this.$li)
         }
         $(this.$hover).on('mouseover', function (   ) {
-            console.log(this)
-            $(this.$hover).animate({opacity:0.6},10)
+            $(this.$hover).animate({opacity:0.6},10);
             $(this.$icon).stop().animate({
                 opacity:1,
                 margin:"-50px -50px",
             },10)
-            // console.log(this.$prev)
         }.bind(this))
         $(this.$icon).on('mouseover', function (   ) {
-            console.log(this)
             $(this.$hover).animate({opacity:0.6},10)
             $(this.$icon).stop().animate({
                 opacity:1,
                 margin:"-50px -50px",
             },10)
-            // console.log(this.$prev)
         }.bind(this))
         $(this.$hover).on('mouseout', function () {
             console.log(this)
@@ -88,11 +84,19 @@ define(['jquery'], function ($) {
             // console.log(this.$prev)
         }.bind(this))
 
-         $("#icon li").on("click",function (e) {
+         $("#icon").on("click",function (e) {
        // if(this.df.shuxing.indexOf("asd")==false){
        //    this.$hull.attr("display","none")
        // }
-           if(this.df.shuxing.indexOf($(e.target).html())==-1){
+             var $int
+             if($(e.target).hasClass("fa")){
+                 $int = $(e.target).parent().find("p")
+             }else if($(e.target).hasClass("li")){
+                 $int = $(e.target).find("p")
+             }else{
+                 $int=$(e.target)
+             }
+           if(this.df.shuxing.indexOf($int.html())==-1){
                this.$hull.hide()
            }else{
                this.$hull.show()

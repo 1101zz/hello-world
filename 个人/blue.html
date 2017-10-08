@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Title</title>
@@ -12,10 +13,7 @@
         float:left;
         margin: 0;
         padding:0}
-        li{list-style: none}
-        body{
-            background:blue;
-        }
+        li{list-style: none;}
 .xiangmu{
     background:black;
     width: 100%;
@@ -76,12 +74,13 @@
         #icon{
                      display: block;
                      width: 80%;
-                     margin: 0 auto;
+                     margin: 20px auto;
                  }
         #icon ol{
             display: block;
             width: 100%;
             text-align: center;
+            padding-bottom: 30px;
         }
         #icon li{
             /*display: inline-block;*/
@@ -99,15 +98,21 @@
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            line-height: 100px;
             /*padding-top: 20px;*/
             transition: all 0.4s ease-out 0s;
             background: rgb(50,50,50);
             color: #FFFFFF;
         }
+       #icon i{
+            line-height: 90px;
+        }
         #icon li:hover{
             background: white;
             color: black;
+        }
+        #icon p{
+            display: block;
+            height: 20px;
         }
         @media (max-width: 900px) {
             .xiangmu{
@@ -153,11 +158,16 @@
                 width: 50px;
                 height: 50px;
                 border-radius: 50%;
-                line-height: 100px;
+                line-height: 50px;
                 /*padding-top: 20px;*/
                 transition: all 0.4s ease-out 0s;
                 background: rgb(50,50,50);
                 color: #FFFFFF;
+                position: relative;
+                font-size:10px;
+            }
+            #icon i{
+                line-height: 50px;
             }
         }
 
@@ -172,11 +182,11 @@
 </div>
 <div id="icon">
     <ol>
-        <li>123</li>
-        <li>456</li>
-        <li>789</li>
-        <li>html5</li>
-        <li>asdjaskl</li></ol>
+        <li class="li"><i class="fa fa-html5 fa-2x"></i><p>123</p></li>
+        <li  class="li"><i class="fa fa-laptop fa-2x"></i><p>456</p></li>
+        <li  class="li"><i class="fa fa-th fa-2x"></i><p>789</p></li>
+        <li  class="li"><i class="fa fa-css3 fa-2x"></i><p>234</p></li>
+        <li  class="li"><i class="fa fa-jsfiddle fa-2x"></i><p>345  </p></li></ol>
 </div>
 <div id="xiangmu">
 <ol id="one"></ol>
@@ -203,6 +213,13 @@
     $(function () {
 //        $("#icon li").css("marginRight",($("#icon ol").width()-500)/11)
 //        $("#icon li").css("marginLeft",($("#icon ol").width()-500)/11)
+        $(window).resize(function () {
+            if($(window).width()<400){
+                $("i").removeClass("fa-2x")
+            }else {
+                $("i").addClass("fa-2x")
+            }
+        })
 
     })
 </script>

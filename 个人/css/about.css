@@ -33,7 +33,7 @@
     list-style-type: disc;
 }
 #me li{
-    display: inline-block;
+    display:inline-block;
     list-style: none;
     margin: 0 30px;
     width: 100px;
@@ -44,6 +44,14 @@
     transition: all 0.4s ease-out 0s;
     background: rgb(50,50,50);
     color: #FFFFFF;
+    text-align: -webkit-match-parent;
+}
+#me li div{
+    height: 50px;
+    line-height: 50px;
+}
+.one{
+    color:#D0482B;
 }
 #hover li:hover{
     background:  #FFFFFF;
@@ -214,6 +222,11 @@
         height: 70px;
         line-height: 70px;
         font-size: 10px;
+        margin: 0;
+    }
+    #me li div{
+        height: 35px;
+        line-height: 35px   ;
     }
     #experiences h2{
         width: 100%;
@@ -252,12 +265,4 @@
     }
 
 
-}
-@media (max-width: 340px){
-    #me li{
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 5px;
-    }
 }

@@ -15,35 +15,24 @@ $(function () {
             }
         }, 2000)
 
-    $(".icon").on("click",function (e) {
-        var ind;
-        if(e.target.className=="icon"){
+    $(".icon").on("mousein",function (e) {
+         var ind;
+         if(e.target.className=="icon"){
             ind = $('#emil .icon').index(this)
             console.log(ind)
-        }else{ind=$('#emil .icon').index($(e.target).parent())}
-        if(a==true){
-           $("#text").find("div").eq(ind).animate({
+         }else{ind=$('#emil .icon').index($(e.target).parent())}
+           $("#text").find("div").eq(ind).stop().animate({
                opacity:1,
                zIndex:999
-           },1000).siblings().animate({
+           },10).siblings().stop().animate({
                opacity:0,
                zIndex:-1
-           },1000)
-            a=false
-            }else{
-               $("#text").find("div").animate({
-                   opacity:0,
-                   zIndex:-1
-               },1000)
-               a=true
-           }
-
+           },10)
     }
 )
-    $(".aa").on("click",function () {
-      $(".aa").animate({
+    $(".aa").on("mouseout",function () {
+      $(".aa").stop().animate({
           opacity:0,
           zIndex:-1
-      },1000)
-        a=true
+      },10)
     })})

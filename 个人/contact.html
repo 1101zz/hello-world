@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
 
@@ -17,11 +18,11 @@
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. </p>
     </div>
     <div id="tel">
-        <div class="fangshi"><div class="ico">513645</div>
+        <div class="fangshi"><div class="ico"><i class="fa fa-jsfiddle fa-3x"></i></div>
         <p>alskjdalskjdals</p></div>
-        <div class="fangshi1"><div class="ico">asdasd</div>
+        <div class="fangshi1"><div class="ico"><i class="fa fa-jsfiddle fa-3x"></i></div>
             <p>alskjdalskjdals</p></div>
-        <div class="fangshi"><div class="ico">asdas</div>
+        <div class="fangshi"><div class="ico"><i class="fa fa-jsfiddle fa-3x"></i></div>
             <p>alskjdalskjdals</p></div>
 
     </div>
@@ -64,6 +65,13 @@
         $(".ico").height($(".ico").width())
         $(window).resize(function () {
             $(".ico").height($(".ico").width())
+        })
+        $(window).resize(function () {
+            if($(window).width()<800){
+                $("i").removeClass("fa-3x").addClass("fa-2x")
+            }else {
+                $("i").addClass("fa-3x").addClass("fa-2x")
+            }
         })
 
     })

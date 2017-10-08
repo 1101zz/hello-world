@@ -22,20 +22,33 @@ body{
     margin-top: 40px;
 }
 .ico{
-    display: block;
-    width: 50%;
+    display: table;
+    width: 30%;
     /*float: left;*/
     border-radius: 50%;
     background: #2a8c70;
     margin: 0 auto;
+    transition: all 1s ease;
+    position: relative;
 
+}
+.ico:hover{
+    background: #000;
+    color:white;
+}
+    i{
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
 }
 .fangshi,.fangshi1{
     display: table-cell;
     width: 30%;
     float: left;
     text-align: center;
+    position: relative;
 }
+
 .fangshi1{
     margin: 0 5%;
 }
