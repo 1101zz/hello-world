@@ -15,7 +15,7 @@ $(function () {
             }
         }, 2000)
 
-    $(".icon").on("mousein",function (e) {
+    $(".icon").on("mouseover",function (e) {
          var ind;
          if(e.target.className=="icon"){
             ind = $('#emil .icon').index(this)

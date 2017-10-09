@@ -19,7 +19,8 @@ define(['jquery'], function ($) {
             img: "img/2.jpg",
             title: "asldjlsa",
             main: "aslkdjlaskhflksajclvnsvlavj",
-            shuxing: "asd"
+            shuxing: "asd",
+            dizhi:"index.html"
         };
         $.extend(this.df, xiangmu);
     }
@@ -75,7 +76,6 @@ define(['jquery'], function ($) {
             },10)
         }.bind(this))
         $(this.$hover).on('mouseout', function () {
-            console.log(this)
             $(this.$hover).animate({opacity:0},10)
             $(this.$icon).stop().animate({
                 opacity:0,
@@ -103,7 +103,11 @@ define(['jquery'], function ($) {
            }
          }.bind(this))
       // $(window).resize()
+        $(this.$hover).on("click",(function (e) {
+        window.location.href="project/"+this.df.dizhi
+    }.bind(this)))
     }
+
 
     return xiangmu
 
