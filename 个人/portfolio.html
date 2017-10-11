@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+<div class="tit">
+    <h1>Coding Skills</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. </p>
+</div>
+<div id="icon">
+    <ol>
+        <li class="li"><i class="fa fa-html5 fa-2x"></i><p>123</p></li>
+        <li  class="li"><i class="fa fa-laptop fa-2x"></i><p>456</p></li>
+        <li  class="li"><i class="fa fa-th fa-2x"></i><p>789</p></li>
+        <li  class="li"><i class="fa fa-css3 fa-2x"></i><p>234</p></li>
+        <li  class="li"><i class="fa fa-jsfiddle fa-2x"></i><p>345  </p></li></ol>
+</div>
+<div id="xiangmu">
+<ol id="one"></ol>
+<ol id="two"></ol>
+<ol id="three"></ol>
+</div>
+<!--<div class="xiangmu">-->
+<!--<img src="img/7.jpg">-->
+<!--<h4>aslkdjlas</h4>-->
+<!--<span>alksjflakjdgasdsfghjhkl;kjhgrfwswefrgtyujkjhgredsaSDEFRGTYUIYGRFDShlh</span>-->
+<!--<div class="hover">  <span class="icon"></span></div>-->
+
+
+<!--</div>-->
+<!--<div class="xiangmu">-->
+<!--<img src="img/7.jpg">-->
+<!--<h4>aslkdjlas</h4>-->
+<!--<span>alksjflakjdgasdsfghjhkl;kjhgrfwswefrgtyujkjhgredsaSDEFRGTYUIYGRFDShlh</span>-->
+<!--<div class="hover">  <span class="icon"></span></div>-->
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/require.js" data-main="js/blue"></script>
+<!--<script src="js/blue.js"></script>-->
+<script>
+    $(function () {
+//        $("#icon li").css("marginRight",($("#icon ol").width()-500)/11)
+//        $("#icon li").css("marginLeft",($("#icon ol").width()-500)/11)
+        $(window).resize(function () {
+            if($(window).width()<400){
+                $("i").removeClass("fa-2x")
+            }else {
+                $("i").addClass("fa-2x")
+            }
+        })
+
+    })
+</script>
+</body>
+</html>

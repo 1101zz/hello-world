@@ -11,7 +11,7 @@ define(['jquery'], function ($) {
         this.$li=$("<li></li>");
         this.$hull = $("<div class='xiangmu'></div>");
         this.$hover = $('<div class="hover"></div>');
-        this.$icon=$('<span class="icon"></span>');
+        this.$icon=$('<span class="icon"><i class="fa fa-qq fa-3x"></i></span>');
         this.$title = $('<h4></h4>');
         this.$main = $('<span></span>');
         this.df = {
@@ -36,17 +36,11 @@ define(['jquery'], function ($) {
         $two=$("#two").height();
         $three=$("#three").height();
         if($(window).width()>900){
-            if($one<$two&&$one<$three){
+            if($one<=$two&&$one<=$three){
                 $("#one").append(this.$li);
-            }else if($two<$one&&$two<$three){
+            }else if($two<=$one&&$two<=$three){
                 $("#two").append(this.$li)
-            }else if($three<$one&&$three<$two){
-                $("#three").append(this.$li)
-            }else if($one==$two && $one==$three){
-                $("#one").append(this.$li)
-            }else if($one!=$two && $two==$three){
-                $("#two").append(this.$li)
-            }else{
+            }else if($three<=$one&&$three<=$two){
                 $("#three").append(this.$li)
             }
         }
@@ -85,9 +79,6 @@ define(['jquery'], function ($) {
         }.bind(this))
 
          $("#icon").on("click",function (e) {
-       // if(this.df.shuxing.indexOf("asd")==false){
-       //    this.$hull.attr("display","none")
-       // }
              var $int
              if($(e.target).hasClass("fa")){
                  $int = $(e.target).parent().find("p")
@@ -103,9 +94,12 @@ define(['jquery'], function ($) {
            }
          }.bind(this))
       // $(window).resize()
-        $(this.$hover).on("click",(function (e) {
+        $(this.$hover).on("click",(function () {
         window.location.href="project/"+this.df.dizhi
     }.bind(this)))
+        $(this.$icon).on("click",(function () {
+            window.location.href="project/"+this.df.dizhi
+        }.bind(this)))
     }
 
 

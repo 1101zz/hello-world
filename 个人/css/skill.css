@@ -1,3 +1,13 @@
+.true,.true1{
+    text-align: center;
+    position: relative;
+}
+.true i,.true1 i{
+    position: absolute;
+    top:25%;
+    left:25%;
+    color: #D0482B;
+}
 
 #skills{
     padding-top: 50px;
@@ -56,6 +66,7 @@
     padding-right: 60px;
     box-sizing: border-box;
     position: relative;
+    color: white;
 }
 .dian1{
     width: 45%;
@@ -65,6 +76,7 @@
     padding-left: 60px;
     box-sizing: border-box;
     position: relative;
+    color: white;
 }
 #z,#x,#s,#v{
     display: block;
