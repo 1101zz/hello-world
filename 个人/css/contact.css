@@ -1,18 +1,18 @@
 body{
-    background: green;
+    background:rgba(0, 0, 0, 0.6);
 }
 #gray{
     display: block;
     width: 100%;
     height: 200px;
-    background: #000;
+    background: rgba(0, 0, 0, 0.6);
 }
 #lianxifangshi{
     display: block;
     width: 100%;
     padding-top: 40px;
     padding-bottom: 50px;
-    background: #aaaaaa;
+    background: rgba(0, 0, 0, 0.6);
 }
 #tel{
     display: table;
@@ -26,17 +26,18 @@ body{
     width: 30%;
     /*float: left;*/
     border-radius: 50%;
-    background: #2a8c70;
+    background: rgb(50,50,50);
     margin: 0 auto;
     transition: all 1s ease;
     position: relative;
 
 }
 .ico:hover{
-    background: #000;
+    background:white;
     color:white;
 }
     i{
+        color:#D0482B;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -48,6 +49,9 @@ body{
     text-align: center;
     position: relative;
 }
+.fangshi,.fangshi1{
+    color: white;
+}
 
 .fangshi1{
     margin: 0 5%;
@@ -55,18 +59,20 @@ body{
 #form{
     display: table;
     width: 100%;
-    background: #000;
+    background:#4a504f;
     padding-top: 50px;
     padding-bottom: 50px;
 }
 .danhang{
     display: table-cell;
+    background: #4a504f;
     width: 80%;
     padding: 10px;
     margin-top: 20px;
-
+    border: 1px solid rgba(0,0,0);
 }
 .duohang{
+    background:#4a504f;
     width: 90%;
     padding: 10px;
     margin-top: 20px;
