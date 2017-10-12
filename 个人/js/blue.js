@@ -31,7 +31,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
         img:"img/4.jpg",
         title:"asldjlsa",
         main:"aslkdjlaskhflksajclvnsvlavj",
-        shuxing:"123",
+        shuxing:"123all",
         dizhi:"index.html"
     };
     var asd=new xiangmu(shuxing);
@@ -41,7 +41,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
         img:"img/3.jpg",
         title:"asldjlsa",
         main:"aslkdjlaskhflksajclvnsvlavj",
-        shuxing:"456",
+        shuxing:"456all",
         dizhi:"111.html"
     };
     var asd1=new xiangmu(shuxing1);
@@ -51,7 +51,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
         img:"img/5.jpg",
         title:"asldjlsa",
         main:"aslkdjlaskhflksajclvnsvlavj",
-        shuxing:"123",
+        shuxing:"123all",
         dizhi:"13.html"
     };
     var asd2=new xiangmu(shuxing2);
@@ -61,7 +61,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
         img:"img/5.jpg",
         title:"asldjlsa",
         main:"aslkdjlaskhflksajclvnsvlavj",
-        shuxing:"456",
+        shuxing:"456all",
         dizhi:"q.html"
     };
     var asd3=new xiangmu(shuxing3);
@@ -71,7 +71,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
         img:"img/4.jpg",
         title:"asldjlsa",
         main:"aslkdjlaskhflksajclvnsvlavj",
-        shuxing:"789",
+        shuxing:"789all",
         dizhi:"zhuye.html"
     };
     var asd4=new xiangmu(shuxing4);
@@ -81,7 +81,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
         img:"img/5.jpg",
         title:"asldjlsa",
         main:"aslkdjlaskhflksajclvnsvlavj",
-        shuxing:"123",
+        shuxing:"123all",
         dizhi:"index.html"
     };
     var asd5=new xiangmu(shuxing5);
@@ -91,7 +91,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
         img:"img/5.jpg",
         title:"asldjlsa",
         main:"aslkdjlaskhflksajclvnsvlavj",
-        shuxing:"789",
+        shuxing:"789all",
         dizhi:"index.html"
     };
     var asd6=new xiangmu(shuxing6);
@@ -101,7 +101,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
         img:"img/4.jpg",
         title:"asldjlsa",
         main:"aslkdjlaskhflksajclvnsvlavj",
-        shuxing:"456",
+        shuxing:"456all",
         dizhi:"index.html"
     };
     var asd7=new xiangmu(shuxing7);
@@ -111,7 +111,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
         img:"img/3.jpg",
         title:"asldjlsa",
         main:"aslkdjlaskhflksajclvnsvlavj",
-        shuxing:"123",
+        shuxing:"123all",
         dizhi:"index.html"
     };
     var asd8=new xiangmu(shuxing8);
@@ -125,7 +125,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
             img:"img/4.jpg",
             title:"asldjlsa",
             main:"aslkdjlaskhflksajclvnsvlavj",
-            shuxing:"123",
+            shuxing:"123all",
             dizhi:"index.html"
         };
         var asd=new xiangmu(shuxing);
@@ -135,7 +135,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
             img:"img/3.jpg",
             title:"asldjlsa",
             main:"aslkdjlaskhflksajclvnsvlavj",
-            shuxing:"456",
+            shuxing:"456all",
             dizhi:"111.html"
         };
         var asd1=new xiangmu(shuxing1);
@@ -145,7 +145,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
             img:"img/5.jpg",
             title:"asldjlsa",
             main:"aslkdjlaskhflksajclvnsvlavj",
-            shuxing:"123",
+            shuxing:"123all",
             dizhi:"13.html"
         };
         var asd2=new xiangmu(shuxing2);
@@ -155,7 +155,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
             img:"img/5.jpg",
             title:"asldjlsa",
             main:"aslkdjlaskhflksajclvnsvlavj",
-            shuxing:"456",
+            shuxing:"456all",
             dizhi:"q.html"
         };
         var asd3=new xiangmu(shuxing3);
@@ -165,7 +165,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
             img:"img/4.jpg",
             title:"asldjlsa",
             main:"aslkdjlaskhflksajclvnsvlavj",
-            shuxing:"789",
+            shuxing:"789all",
             dizhi:"zhuye.html"
         };
         var asd4=new xiangmu(shuxing4);
@@ -175,7 +175,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
             img:"img/5.jpg",
             title:"asldjlsa",
             main:"aslkdjlaskhflksajclvnsvlavj",
-            shuxing:"123",
+            shuxing:"123all",
             dizhi:"index.html"
         };
         var asd5=new xiangmu(shuxing5);
@@ -185,7 +185,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
             img:"img/5.jpg",
             title:"asldjlsa",
             main:"aslkdjlaskhflksajclvnsvlavj",
-            shuxing:"789",
+            shuxing:"789all",
             dizhi:"index.html"
         };
         var asd6=new xiangmu(shuxing6);
@@ -195,7 +195,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
             img:"img/4.jpg",
             title:"asldjlsa",
             main:"aslkdjlaskhflksajclvnsvlavj",
-            shuxing:"456",
+            shuxing:"456all",
             dizhi:"index.html"
         };
         var asd7=new xiangmu(shuxing7);
@@ -205,7 +205,7 @@ requirejs(["jquery","xiangmu"],function ($,xiangmu) {
             img:"img/3.jpg",
             title:"asldjlsa",
             main:"aslkdjlaskhflksajclvnsvlavj",
-            shuxing:"123",
+            shuxing:"123all",
             dizhi:"index.html"
         };
         var asd8=new xiangmu(shuxing8);
