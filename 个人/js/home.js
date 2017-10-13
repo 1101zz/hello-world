@@ -30,7 +30,7 @@ $(function () {
            },10)
     }
 )
-    $(".aa").on("mouseout",function () {
+    $(".aa").on("click",function () {
       $(".aa").stop().animate({
           opacity:0,
           zIndex:-1

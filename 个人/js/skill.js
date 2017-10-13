@@ -34,7 +34,6 @@ define(['jquery'], function ($) {
                 a++
             }
             $(".e").eq(g).text(a+"%")
-     console.log(this.$index)
         },1000/b)
         var c = document.getElementsByClassName("canvas")[i];
         i++

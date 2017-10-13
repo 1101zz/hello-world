@@ -11,7 +11,7 @@ define(['jquery'], function ($) {
         this.$li=$("<li></li>");
         this.$hull = $("<div class='xiangmu'></div>");
         this.$hover = $('<div class="hover"></div>');
-        this.$icon=$('<span class="icon"><i class="fa fa-qq fa-3x"></i></span>');
+        this.$icon=$('<span class="icon"> <i class="fa fa-reply fa-3x" aria-hidden="true"></i></span>');
         this.$title = $('<h4></h4>');
         this.$main = $('<span></span>');
         this.df = {
@@ -77,7 +77,6 @@ define(['jquery'], function ($) {
             },10)
             // console.log(this.$prev)
         }.bind(this))
-
          $("#icon").on("click",function (e) {
              var $int
              if($(e.target).hasClass("fa")){
@@ -93,7 +92,6 @@ define(['jquery'], function ($) {
                this.$hull.show()
            }
          }.bind(this))
-      // $(window).resize()
         $(this.$hover).on("click",(function () {
         window.location.href="project/"+this.df.dizhi
     }.bind(this)))
@@ -106,6 +104,3 @@ define(['jquery'], function ($) {
     return xiangmu
 
 })
-// window.addEventListener('resize',function () {
-//     i=0;
-//     this.init();
