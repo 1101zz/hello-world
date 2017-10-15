@@ -12,7 +12,7 @@ $(function () {
             i++
             if (i == 6) {
                 i = 1
-            }
+        }
         }, 2000)
 
     $(".icon").on("mouseover",function (e) {

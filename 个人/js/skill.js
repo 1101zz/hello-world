@@ -38,22 +38,22 @@ define(['jquery'], function ($) {
         var c = document.getElementsByClassName("canvas")[i];
         i++
         var ctx = c.getContext('2d');
-        var mW = c.width = 100;
-        var mH = c.height =100;
+        var w = c.width = 100;
+        var h = c.height =100;
         var lineWidth =10;
-        var r = mW / 2;
-        var cR = r-20;
+        var r = w / 2;
+        var R = r-20;
         var startAngle = (0);
         var endAngle = startAngle + 2*this.df.baifenbi/100* Math.PI;
-        var xAngle =this.df.baifenbi/15 * (Math.PI / 180);
-        var tmpAngle = startAngle;
+        var xangle =this.df.baifenbi/15 * (Math.PI / 180);
+        var tmpangle = startAngle;
         var rander = function(){
-            if(tmpAngle >= endAngle){
+            if(tmpangle >= endAngle){
                 return;
-            }else if(tmpAngle + xAngle > endAngle){
-                tmpAngle = endAngle;
+            }else if(tmpangle + xangle > endAngle){
+                tmpangle = endAngle;
             }else{
-                tmpAngle += xAngle;
+                tmpangle += xangle;
             }
             ctx.save();
             ctx.beginPath();
@@ -61,10 +61,10 @@ define(['jquery'], function ($) {
             ctx.strokeStyle = '#D0482B';
             ctx.translate(r, r);
             ctx.rotate(-Math.PI);
-            for(var i = 0; i <= tmpAngle - startAngle; i += xAngle){
-                ctx.moveTo(0, cR - 10);
-                ctx.lineTo(0, cR);
-                ctx.rotate(xAngle);
+            for(var i = 0; i <= tmpangle - startAngle; i += xangle){
+                ctx.moveTo(0, R - 10);
+                ctx.lineTo(0, R);
+                ctx.rotate(xangle);
             }
             ctx.stroke();
             ctx.closePath();
