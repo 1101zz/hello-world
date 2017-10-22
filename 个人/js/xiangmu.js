@@ -27,7 +27,7 @@ define(['jquery'], function ($) {
     var $one;
     var $two;
     var $three;
-    xiangmu.prototype.init=function () {
+    xiangmu.prototype.init=function(){
         this.$hull.append("<img src='" + this.df.img + "'>").append(this.$hover).append(this.$title).append(this.$main).append(this.$icon);
         this.$title.append(this.df.title);
         this.$main.append(this.df.main);
@@ -59,26 +59,26 @@ define(['jquery'], function ($) {
             $(this.$hover).animate({opacity:0.6},10);
             $(this.$icon).stop().animate({
                 opacity:1,
-                margin:"-50px -50px",
+                margin:"-50px -50px"
             },10)
-        }.bind(this))
+        }.bind(this));
         $(this.$icon).on('mouseover', function (   ) {
-            $(this.$hover).animate({opacity:0.6},10)
+            $(this.$hover).animate({opacity:0.6},10);
             $(this.$icon).stop().animate({
                 opacity:1,
-                margin:"-50px -50px",
+                margin:"-50px -50px"
             },10)
-        }.bind(this))
+        }.bind(this));
         $(this.$hover).on('mouseout', function () {
-            $(this.$hover).animate({opacity:0},10)
+            $(this.$hover).animate({opacity:0},10);
             $(this.$icon).stop().animate({
                 opacity:0,
-                margin:"0 -50px",
-            },10)
+                margin:"0 -50px"
+            },10);
             // console.log(this.$prev)
-        }.bind(this))
+        }.bind(this));
          $("#icon").on("click",function (e) {
-             var $int
+             var $int;
              if($(e.target).hasClass("fa")){
                  $int = $(e.target).parent().find("p")
              }else if($(e.target).hasClass("li")){
@@ -91,16 +91,16 @@ define(['jquery'], function ($) {
            }else{
                this.$hull.show()
            }
-         }.bind(this))
+         }.bind(this));
         $(this.$hover).on("click",(function () {
         window.location.href="project/"+this.df.dizhi
-    }.bind(this)))
+    }.bind(this)));
         $(this.$icon).on("click",(function () {
             window.location.href="project/"+this.df.dizhi
         }.bind(this)))
-    }
+    };
 
 
     return xiangmu
 
-})
+});

@@ -31,7 +31,7 @@ requirejs(["jquery","skill"],function ($,skill) {
     asd2.init();
     var skills = {
         dizhi:$("#v"),
-        baifenbi:30
+        baifenbi:50
     };
     var asd3 = new skill(skills);
     asd3.init()

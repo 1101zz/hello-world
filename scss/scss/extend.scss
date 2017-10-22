@@ -1,0 +1,12 @@
+
+@import "base";
+div{
+  color:#000;
+  a{
+    font-size: 12px;
+  }
+}
+p{
+  @extend div;
+  font-size:10px;
+}

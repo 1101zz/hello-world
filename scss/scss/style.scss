@@ -1,0 +1,21 @@
+$aa:#abcdef;
+
+
+
+body{
+  background: $aa;
+  float: left;
+  max-width:100px;
+  padding: 10px;
+  transition: all 1s ease;
+  ul{
+    background: $aa;
+    li{
+      background: $aa;
+      &:hover{
+        background: $aa;
+        font-size: 10px;
+      }
+    }
+  }
+}

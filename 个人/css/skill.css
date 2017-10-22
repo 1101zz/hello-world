@@ -8,7 +8,6 @@
     left:25%;
     color: #D0482B;
 }
-
 #skills{
     padding-top: 50px;
     width: 100%;
@@ -57,7 +56,6 @@
     left: 0;
     top: 0;
 }
-
 .dian{
     width: 45%;
     margin-right: 5%;
@@ -88,7 +86,6 @@
     position: absolute;
     right: 0;
 }
-
 #v,#x{
     float: left;
     position: absolute;
@@ -126,8 +123,6 @@
     margin-right: 10%;
     text-align: left;
 }
-
-
 #b{
     width: 100%;
     padding-top: 50px;

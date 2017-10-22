@@ -1,0 +1,19 @@
+body {
+  background: #abcdef;
+  float: left;
+  max-width: 100px;
+  padding: 10px;
+  transition: all 1s ease;
+}
+body ul {
+  background: #abcdef;
+}
+body ul li {
+  background: #abcdef;
+}
+body ul li:hover {
+  background: #abcdef;
+  font-size: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

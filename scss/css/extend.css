@@ -1,0 +1,17 @@
+* {
+  margin: 10px;
+  padding: 10px;
+}
+
+div, p {
+  color: #000;
+}
+div a, p a {
+  font-size: 12px;
+}
+
+p {
+  font-size: 10px;
+}
+
+/*# sourceMappingURL=extend.css.map */

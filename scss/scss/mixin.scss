@@ -1,0 +1,12 @@
+@mixin text{
+  background: #000;
+}
+@mixin tttt{
+  background: #fff;
+}
+body{
+  @include text();
+}
+ul{
+  @include tttt()
+}
