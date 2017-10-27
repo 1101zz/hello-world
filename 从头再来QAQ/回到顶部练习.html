@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            display: block;
+            height: 3000px;
+            width: 3000px;
+        }
+        #o{
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: #ffff00;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+hah
+<div id="o">aaa</div>
+<script>
+    var oa=document.getElementById("o")
+    oa.onclick=function () {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;//不同浏览器不兼容
+        var scrollleft=document.documentElement.scrollLeft || document.body.scrollLeft
+       var time= setInterval(function () {              //定时器最好使用var定义，方便用clearInterval清除定时器
+            window.scrollTo(scrollleft/=1.1,scrollTop/=1.1)        //window.scrollTo两个参数为y轴回到，以及x轴回到
+        },100)
+        if(scrollTop<=0){
+           clearInterval(time)
+        }
+    }
+</script>
+</body>
+</html>

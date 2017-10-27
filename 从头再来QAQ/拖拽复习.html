@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #o{
+            display: block;
+            width: 200px;
+            height:200px;
+            background: #ff00ff;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="o"></div>
+<script>
+    var o=document.getElementById("o");
+    o.onmousedown=function (e) {
+        e=e||window.event;
+        var x=e.clientX-o.offsetLeft   ;    //e.clientX为当前鼠标位置距离窗口最左侧距离，y为最顶，offsetleft为当前元素最边框距离窗口边框距离
+        var y=e.clientY-o.offsetTop;
+        console.log(x,y);
+            document.onmousemove=function (e) {          //o.和document同样可以实现，但如果o存在如果鼠标快速移动跑出o的边框时拖拽失效的情况
+                e = e || window.event;
+                o.style.left = e.clientX - x + "px";
+                o.style.top = e.clientY - y + "px";
+                console.log(o.style.left)
+            }
+        o.onmouseup=function () {
+            document.onmousemove=function () {
+            };
+        }
+    }
+</script>
+</body>
+</html>

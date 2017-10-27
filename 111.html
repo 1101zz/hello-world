@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="a">
+    <button @click="fn">asd</button>
+    <span v-html="msg">{{msg}}</span>
+    <span v-text="msg">{{msg}}</span>
+    <input type="text" v-model="msg">
+</div>
+<div id="b">
+    <input type="text" value="asd">
+    <span></span>
+</div>
+<script src="vue.js"></script>
+<script>
+    var d=document.getElementById("b")
+    var w=document.getElementById("a")
+    var c=d.getElementsByTagName("input")
+    c[0].onkeyup=function (e) {
+        var g=d.getElementsByTagName("span")
+//        console.log(e.key)
+        g[0].innerHTML=c[0].value;
+    }
+    var vm = new Vue({
+        el:"#a",
+        data:{
+            msg:"<h1>asljdfvldksjvn</h1>>"
+        },
+        methods:{
+            fn:function () {
+             vm.msg="<img src='01.jpg'>"
+
+            }
+        }
+    })
+
+//        function V(obj) {
+//        for(var z in obj){
+//            if(z=='el'){
+//                this["$"+z]=document.querySelector(obj[z]);
+//                console.log(
+//                    obj[z]
+//                )
+//            }else if(z=="ccc"){
+//                    this["$"+z]=obj[z];
+//                    for(var q in obj[z]){
+//                        this[q]=obj[z][q]
+//                    }
+//            }
+//        }
+//
+//    }
+//  var v= new V({
+//       el:"#b",
+//       ccc:{
+//           as:"asd"
+//       }
+//   })
+</script>
+</body>
+</html>
