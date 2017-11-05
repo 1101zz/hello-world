@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .a{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div id="a">
+  <span>{{sort()}}
+    </span> <input type="text" v-model="msg">
+    <button @click="add">zhangboyuan</button>
+    <ol>
+        <li v-for="(n,index) in arr" :class="a:n.num">{{n.neirong}}</li>
+    </ol>
+</div>
+<script src="vue.js"></script>
+<script>
+    new  Vue({
+        el:"#a",
+        data:{
+            msg:"",
+            arr:[],
+        },
+        methods:{
+            add:function () {
+                this.arr.push({neirong:this.msg,num:true})
+            },
+            sort:function(){this.arr.sort(function (a,b) {
+                return a.neirong>b.neirong
+            })}
+        }
+    })
+</script>
+</body>
+</html>

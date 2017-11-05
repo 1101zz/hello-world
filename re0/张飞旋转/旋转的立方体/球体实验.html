@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            perspective: 1000px;
+            perspective-origin: 50% 50%;
+        }
+        .huan{
+            margin: 100px;
+            width: 200px;
+            height: 200px;
+            background: transparent;
+            border-radius: 50%;
+            border:5px solid #b9dcd0;
+            transform-style: preserve-3d;
+            position: absolute;
+
+
+        }
+        .a{
+            transform-style: preserve-3d;
+            /*animation: aa 3s linear infinite;*/
+        }
+        .c{
+            animation: rotate 3s linear infinite;
+        }
+        .d{
+           animation:rotatey 3s linear infinite
+        }
+        .e{
+            animation:rotateqz 3s linear infinite
+        }
+        .circle{
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: black;
+            position: relative;
+            background: radial-gradient(circle at 0px 0px,#5cabff,red,orange,yellow,green,skyblue,blue,purple);
+            transform-style: preserve-3d;
+            transform: rotateY(80deg);
+
+        }
+        .y{
+            margin: 100px 80px 100px -25px;
+            animation: rotateyq 3s linear infinite;
+        }
+        .x{
+            margin:-25px auto;
+            animation: rotateqx 3s linear infinite;
+        }
+        .z{
+           position: absolute;
+            left:100px;
+            bottom: -25px;
+            animation: rotateqz 3s linear infinite;
+        }
+        @keyframes aa {
+            from{
+
+            }
+            to{
+                transform:rotateY(720deg)
+            }
+        }
+        @keyframes rotate{
+            from {
+             transform: rotateX(0deg)
+            }to{
+           transform:rotateX(720deg)
+                         }
+        }
+        @keyframes rotateqx{
+            from{
+                transform: rotateX(0deg)
+            }to{
+            transform:rotateX(-720deg)
+                         }
+        }
+        @keyframes rotatey{
+            from {
+                transform: rotateY(0deg)
+            }to{
+                 transform:rotateY(720deg)
+             }
+        }
+        @keyframes rotateyq{
+            from {
+                transform: rotateY(0deg)
+            }to{
+                 transform:rotateY(-720deg)
+             }
+        }
+        @keyframes rotatez{
+            from {
+                transform: rotateZ(0deg)
+            }to{
+                 transform:rotateZ(-360deg)
+             }
+        } @keyframes rotateqz{
+              from {
+                  transform: rotateZ(0deg)
+              }to{
+                   transform:rotateZ(-360deg)
+               }
+          }
+    </style>
+</head>
+<body>
+<div class="a">
+<div class="huan c"> <div class="x circle"></div></div>
+<div class="huan d"><div class="y circle"></div></div>
+<div class="huan e"><div class="z circle"></div></div>
+</div>
+</body>
+</html>

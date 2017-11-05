@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        table, th, td{
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<div id="cart">
+    <button id="btn-add" @click="addCart">添加商品</button>
+    <table id="tbl">
+        <thead>
+        <tr>
+            <th></th>
+            <th>商品图片</th>
+            <th>商品信息</th>
+            <th>赠送</th>
+            <th>商品金额</th>
+            <th>商品数量</th>
+            <th>总金额</th>
+            <th>编辑</th>
+        </tr>
+        </thead>
+        <tbody id="product-list">
+
+        </tbody>
+        <tfoot>
+        <td colspan="6">
+        </td>
+        <td>
+            总计：<span id="total">0</span>
+        </td>
+        <td>
+            <button>结账</button>
+        </td>
+        </tfoot>
+    </table>
+</div>
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $.get("cart.json",{},function (data) {
+        var html = '<tr>'
+        +'<td><input type="checkbox"></td>'
+        +'<td><img src="$src" alt="" width="100"></td>'
+        +'<td>$name</td>'
+        +'<td>'
+        +'   <ul>$parts'
+        +'   </ul>'
+        +'</td>'
+        +'<td class="price">$productPrice</td>'
+        +'<td>'
+        +'   <button class="sub">-</button>'
+        +'   <input type="text" value="$num">'
+        +'   <button class="add">+</button>'
+        +'</td>'
+        +'<td class="total-price">$totalPrice</td>'
+        +'<td>'
+        +'   <a href="javascript:;" class="del">删除</a>'
+        +'</td>'
+        +'</tr>';
+        var productList = data.result.productList;
+        for(var i=0;i<productList.length;i++){
+            var sum=html.replace("$name",productList[i].productName).replace("$productPrice",productList[i].productPrice).replace("$totalPrice",productList[i].productPrice*productList[i].productQuentity).replace('$num',productList[i].productQuentity)
+           $("#product-list").append(sum)
+        }
+    },"json")
+
+</script>
+</body>
+</html>

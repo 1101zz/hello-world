@@ -4,28 +4,45 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        table, th, td{
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
-<div id="a"></div>
-<div id="b"></div>
-<!--<div id="container">-->
-    <!--<ul id="tabs">-->
-        <!--<li class="selected">1</li>-->
-        <!--<li>2</li>-->
-        <!--<li>3</li>-->
-        <!--<li>4</li>-->
-    <!--</ul>-->
-    <!--<div id="imgs">-->
-        <!--<img class="selected" src="../../联系/22/img/1.jpg" alt="">-->
-        <!--<img src="../../联系/22/img/2.jpg" alt="">-->
-        <!--<img src="../../联系/22/img/3.jpg" alt="">-->
-        <!--<img src="../../联系/22/img/4.jpg" alt="">-->
-    <!--</div>-->
-    <!--<div id="arrows">-->
-        <!--<span id="prev">&lt;</span>-->
-        <!--<span id="next">&gt;</span>-->
-    <!--</div>-->
-<!--</div>-->
-<script src="js/require.js"data-main="js/index"></script>
+<div id="cart">
+    <button id="btn-add" @click="addCart">添加商品</button>
+    <table id="tbl">
+        <thead>
+        <tr>
+            <th></th>
+            <th>商品图片</th>
+            <th>商品信息</th>
+            <th>赠送</th>
+            <th>商品金额</th>
+            <th>商品数量</th>
+            <th>总金额</th>
+            <th>编辑</th>
+        </tr>
+        </thead>
+        <tbody id="product-list">
+
+        </tbody>
+        <tfoot>
+        <td colspan="6">
+        </td>
+        <td>
+            总计：<span id="total">0</span>
+        </td>
+        <td>
+            <button>结账</button>
+        </td>
+        </tfoot>
+    </table>
+</div><script src="js/require.js"data-main="js/index"></script>
 </body>
 </html>

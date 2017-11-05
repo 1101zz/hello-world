@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .c{
+            display:block;
+            width:300px;
+            height:50px;
+            background:red;
+            margin:20px auto 20px
+        }
+        .d{
+            display:block;
+            width:300px;
+            height:50px;
+            background:green;
+            margin:20px auto 20px
+        }
+    </style>
+</head>
+
+<body>
+<div id="a">
+
+    <div :class="{c:n.active,d:!n.active}" @click="n.active=!n.active;" v-for="(n,index) in arr">{{n.num}}</div>
+    <p :style="[c,cen]">{{sum()}}</p>
+</div>
+<script src="vue.js"></script>
+<script>
+    var d=document.getElementById("a")
+    var a=d.getElementsByTagName("div")
+    var va=new Vue(
+        {
+
+            el:"#a",
+            data:{
+         arr:[
+             {num:Math.floor(Math.random()*100),active:false},
+             {num:Math.floor(Math.random()*100),active:false},
+             {num:Math.floor(Math.random()*100),active:false},
+             {num:Math.floor(Math.random()*100),active:false},
+             {num:Math.floor(Math.random()*100),active:false},
+             {num:Math.floor(Math.random()*100),active:false},
+             {num:Math.floor(Math.random()*100),active:false}
+             ],
+                rad:0,
+                c:{
+                    display:"block",
+                    width:"300px",
+                    height:"50px",
+                    background:"green",
+                    margin:"20px auto 20px"
+                },
+                d:{
+                    display:"block",
+                    width:"300px",
+                    height:"50px",
+                    background:"red",
+                    margin:"20px auto 20px"
+                },
+                rig:{
+                    float:"right",
+                },
+                cen:{
+                    "text-align":"center"
+                }
+            },
+            methods:{
+//                fn:function(){
+//                    console.log(arr[index].active)}
+
+//                                 click:function () {
+//                        console.log(arr[index])
+//                        if(e.target.style.background=="green"){
+//                            e.target.style.background="red"
+//                            va.rad+=Number(e.target.innerHTML)
+//
+//                        }
+//                        else{
+//                            e.target.style.background="green"
+//                            va.rad-=Number(e.target.innerHTML)
+//                        }
+//
+//                }
+                sum:function () {
+                    let num = 0;
+                    this.arr.forEach(function(val,index){
+                        if(val.active){
+                            num += val.num;
+                        }
+                    })
+                    return num;
+                }
+            }
+        }
+    )
+
+</script>
+</body>
+</html>

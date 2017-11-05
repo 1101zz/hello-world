@@ -3,13 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <style>
+        .aaa{
+            color: #ff8c8d;
+        }
+        .font{
+            font-size: 80px;
+        }
+        .aaaa{
+            display: none;
+        }
+        .aa{
+            display: block;
+            width: 200px;
+            height: 200px;
+            background: #000;
+        }
+    </style>
 </head>
 <body>
 <div id="a">
-    <button @click="fn">asd</button>
-    <span v-html="msg">{{msg}}</span>
-    <span v-text="msg">{{msg}}</span>
-    <input type="text" v-model="msg">
+    <!--<button @click="fo">asd</button>-->
+    <!--<span v-html="msg">{{msg}}</span>-->
+    <!--<span v-text="msg">{{msg}}</span>-->
+    <!--<input type="text" v-model="msg">-->
+    <!--<p :class="c">asdfdd</p>-->
+    <!--<p v-bind:id="p1">asdfg</p>-->
+    <!--<p :class="p1">asdasdasd</p>-->
+    <!--<p :class="{aaa:isaaa,font:isfont}">asdfgnh</p>-->
+    <!--<p :class="[classa,classb]">asdfgnh</p>-->
+    <!--<p :style="p">asdasds</p>-->
+    <!--<button @click="a">asdasd</button>-->
+    <!--<div :class="g"></div>-->
+    <!--<p :style="styleobj">wqdfgfgnh</p>-->
+    <!--<p :style="[stylea,styleb]">asd</p>-->
+    <template>
+        <div>daslkdjlkasjdlasjldjaslkdjaslkjdlasjd</div>
+    </template>
 </div>
 <div id="b">
     <input type="text" value="asd">
@@ -28,12 +58,51 @@
     var vm = new Vue({
         el:"#a",
         data:{
-            msg:"<h1>asljdfvldksjvn</h1>>"
+            stylea:{
+                background:"green",
+                color:"red",
+                "font-size":"100px"
+            },
+            styleb:{
+                background:"red",
+                color:"green",
+                "font-size":"100px"
+            },
+            styleobj:{
+                background:"red",
+                color:"pink",
+                "font-size":"100px"
+
+            },
+            msg:"<h1>asljdfvldksjvn</h1>>",
+            p1:'aaa',
+            p:"color='red'",
+            isaaa:true,
+            isfont:true,
+            classa:"aaa",
+            classb:"font",
+            c:{
+                aaa:true,
+                font:false
+            },
+            g:{
+                aa:false,
+                aaaa:true
+            }
         },
-        methods:{
+        methods: {
             fn:function () {
              vm.msg="<img src='01.jpg'>"
 
+            },
+            fo: function () {
+                if (vm.g.aaaa == true) {
+                    vm.g.aaaa = false
+                    vm.g.aa = true
+                } else {
+                    vm.g.aaaa = true
+                    vm.g.aa = false
+                }
             }
         }
     })

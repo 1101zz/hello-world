@@ -6,11 +6,7 @@
 </head>
 <body>
 <div id="a">
-    <div :style="[c,cen]" @click="click">{{rad1}}</div>
-    <div :style="[c,cen]" @click="click">{{rad2}}</div>
-    <div :style="[c,cen]" @click="click">{{rad3}}</div>
-    <div :style="[c,cen]" @click="click">{{rad4}}</div>
-    <div :style="[c,cen]" @click="click">{{rad5}}</div>
+    <div :style="[c,cen]" @click="click" v-for="n in 6">{{rad1}}</div>
     <p :style="[c,cen]">{{rad6}}</p>
 
 </div>

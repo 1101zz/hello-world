@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>放大镜</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #small{
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+        #small, #big{
+            float: left;
+        }
+        #drag{
+            width: 200px;
+            height: 200px;
+            background: #cccccc;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: .6;
+            filter: alpha(opacity=60);
+            display: none;
+        }
+        #big{
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            display: none;
+            position: relative;
+        }
+        #small img{
+            display: block;
+            /*float: left;*/
+        }
+        #big img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #mask{
+            width: 100%;
+            height: 100%;
+            background: #ff0000;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    </style>
+</head>
+<body>
+    <div id="small">
+        <img src="1.jpg" alt="">
+        <div id="drag"></div>
+        <div id="mask"></div>
+    </div>
+    <div id="big">
+        <img src="2.jpg" alt="" id="big-pic">
+    </div>
+    <script>
+        //函数的立即调用
+        (function(){
+            var oSmall = getById("small");
+            var oDrag = getById("drag");
+            var oBig = getById("big");
+            var oBigPic = getById("big-pic");
+            var oMask = getById("mask");
+            oMask.onmouseover = function(){
+                oDrag.style.display = "block";
+                oBig.style.display = "block";
+            };
+            oMask.onmouseout = function(){
+                oDrag.style.display = "none";
+                oBig.style.display = "none";
+            };
+            oSmall.onmousemove = function(e){
+                e = e || window.event;
+                var top = e.clientY - oDrag.offsetHeight / 2;
+                var left = e.clientX - oDrag.offsetWidth / 2;
+                if(left < 0){
+                    left = 0;
+                }
+                if(top < 0){
+                    top = 0;
+                }
+                var xMax = oSmall.offsetWidth - oDrag.offsetWidth;
+                if(left > xMax){
+                    left = xMax;
+                }
+                var yMax = oSmall.offsetHeight - oDrag.offsetHeight;
+                if(top > yMax){
+                    top = yMax;
+                }
+                oDrag.style.top  = top + "px";
+                oDrag.style.left = left + "px";
+
+                //设置大图片的位置
+                var fScaleX = left / xMax;
+                var fScaleY = top / yMax;
+
+                oBigPic.style.top = -fScaleY * (oBigPic.offsetHeight - oBig.offsetHeight) + "px";
+                oBigPic.style.left = -fScaleX * (oBigPic.offsetWidth - oBig.offsetWidth) + "px";
+            };
+
+            function getById(id){
+                return document.getElementById(id);
+            }
+        })();
+
+
+
+    </script>
+</body>
+</html>

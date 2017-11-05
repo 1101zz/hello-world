@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        #small{
+            width: 400px;
+            height: 400px;
+            margin: 0;
+            position: relative;
+            float: left;
+            overflow: hidden;
+            border: 0;
+        }
+        #big{
+            display: none;
+            overflow: hidden;
+            float: left;
+            width: 400px;
+            height: 400px;
+            margin: 0;
+            position: relative;
+        }
+        #big img{
+            position: absolute;
+            left:0;
+            top:0
+        }
+        #magnifier{
+            display: none;
+            width: 200px;
+            height: 200px;
+            background: black;
+            position: absolute;
+            top:0;
+            left: 0;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+<div id="small"><img src="../1.jpg" alt=""><div id="magnifier"></div></div>
+<div id="big"><img src="../2.jpg" alt=""></div>
+<script>
+    var osmall=document.getElementById("small")
+    var omagnifier=document.getElementById("magnifier")
+    var obig=document.getElementById("big")
+    var aimg=obig.getElementsByTagName("img")
+    osmall.onmouseover=function () {
+        omagnifier.style.display="block";
+        obig.style.display="block"
+
+    }
+    osmall.onmouseout=function () {
+        omagnifier.style.display="none";
+        obig.style.display="none"
+    }
+    osmall.onmousemove=function (e) {
+
+        omagnifier.style.top=e.clientY-100+"px"
+        omagnifier.style.left=e.clientX-100+"px"
+        aimg[0].style.top=-2*(e.clientY-100)+"px"
+        aimg[0].style.left=-2*(e.clientX-100)+"px"
+        if(e.clientX-100<0){
+            omagnifier.style.left=0
+            aimg[0].style.left=0
+        }
+        if(e.clientY-100<0){
+            omagnifier.style.top=0
+            aimg[0].style.top=0
+        }
+        if(e.clientX>300){
+            omagnifier.style.left=200+"px"
+            aimg[0].style.left=-400+"px"
+        }
+        if(e.clientY>300){
+            omagnifier.style.top=200+"px"
+            aimg[0].style.top=-400+"px"
+        }
+
+
+    }
+</script>
+</body>
+</html>

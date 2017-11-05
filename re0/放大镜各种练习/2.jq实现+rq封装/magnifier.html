@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .small{
+            width: 400px;
+            height: 400px;
+            margin: 0;
+            position: relative;
+            float: left;
+            overflow: hidden;
+            border: 0;
+        }
+        .big{
+            display: none;
+            overflow: hidden;
+            float: left;
+            width: 400px;
+            height: 400px;
+            margin: 0;
+            position: relative;
+        }
+        .big img{
+            position: absolute;
+            left:0;
+            top:0
+        }
+        .magnifier{
+            display: none;
+            width: 200px;
+            height: 200px;
+            background: black;
+            position: absolute;
+            top:0;
+            left: 0;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+<div class="small"><img src="../1.jpg" alt=""><div class="magnifier"></div></div>
+<div class="big"><img src="../2.jpg" alt=""></div>
+<script src="jquery-1.12.4.js"></script>
+<script src="require.js" data-main="magnifier"></script>
+<script>
+    $(function () {
+        $(".small").on("mouseover",function () {
+        omagnifier.style.display="block";
+        obig.style.display="block"
+         })
+         $(".small").on("mouseout",function () {
+        omagnifier.style.display="none";
+        obig.style.display="none"
+         })
+         $(".small").onmousemove=function (e) {
+                $(".magnifier").style.top=e.clientY-100+"px";
+                 $(".magnifier").style.left=e.clientX-100+"px";
+                $(".big img").style.top=-2*(e.clientY-100)+"px";
+                $(".big img").style.left=-2*(e.clientX-100)+"px";
+             if(e.clientX-100<0){
+            $(".magnifier").style.left=0
+            $(".big img").style.left=0
+                 }
+             if(e.clientY-100<0){
+            $(".magnifier").style.top=0
+            $(".big img").style.top=0
+              }
+                if(e.clientX>300){
+              $(".magnifier").style.left=200+"px"
+             $(".big img").style.left=-400+"px"
+             }
+             if(e.clientY>300){
+                   $(".magnifier").style.top=200+"px"
+                    $(".big img").style.top=-400+"px"
+             }
+         }
+    })
+    </script>
