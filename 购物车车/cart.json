@@ -6,7 +6,7 @@
         "productId": 111,
         "productName": "黄鹤楼",
         "productPrice": 19,
-        "productQuentity":520,
+        "productQuentity": 1,
         "productImg": "img/1.jpg",
         "parts": [
           {

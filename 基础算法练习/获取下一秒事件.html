@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function date(date) {
+        var a=/\d{4}年\d{2}月\d{2}日\d{2}时\d{2}分\d{2}秒$/
+        console.log(a)
+        if(a.exec(date)==null){
+            return console.log("别他妈瞎输入")
+        }
+        console.log(date)
+        var d=date.replace("年","/").replace("月","/").replace("日"," ").replace("时",":").replace("分",":").replace("秒","")
+        var c=new Date(d)
+        c.setSeconds(c.getSeconds()+1)
+       return console.log(c.getFullYear()+"年"+(c.getUTCMonth()+1)+"月"+c.getDate()+"日"+c.getHours()+"时"+c.getMinutes()+"分"+c.getSeconds()+"秒")
+
+    }
+    date("2004年12月15日23时59分59秒")
+    var d="1933/12/15 12:12:12"
+
+</script>
+</body>
+</html>
