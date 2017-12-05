@@ -9,8 +9,8 @@ requirejs.config({
 define(['jquery'], function ($) {
     function magn(magn) {
         this.$data={
-            bigimg:"../magnifer2.jpg",
-            smallimg:"../1.jpg",
+            bigimg:"img/magnifer2.jpg",
+            smallimg:"img/magnifer1.jpg",
             magnifiersize:"100",
             smallsize:"400",
             position:""

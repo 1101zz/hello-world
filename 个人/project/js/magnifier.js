@@ -8,8 +8,8 @@ requirejs.config({
 });
 requirejs(["jquery","magn"],function ($,magn) {
     var img={
-        bigimg:"../magnifer2.jpg",
-        smallimg:"",
+        bigimg:"img/magnifer2.jpg",
+        smallimg:"img/magnifer1.jpg",
         magnifiersize:"100",
         smallsize:"400",
         position:"#a"

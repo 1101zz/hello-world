@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/轮播图.css">
+</head>
+<body>
+<div id="rongqi">
+    <div id="imgs">
+        <img src="img/lunbo1.jpg" alt="" class="nengkanjian">
+        <img src="img/lunbo2.jpg" alt="">
+        <img src="img/lunbo3.jpg" alt="">
+        <img src="img/lunbo4.jpg" alt="">
+    </div>
+    <ol id="liebiao">
+        <li class="shehuang">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+    <div id="qianhou"><span id="qian">&lt;</span><span id="hou">&gt;</span></div>
+</div>
+
+<script>
+    var orq = document.getElementById('rongqi')
+    var olb = document.getElementById('liebiao')
+    var ali = olb.getElementsByTagName('li')
+    var oimgs = document.getElementById('imgs')
+    var aimg = oimgs.getElementsByTagName('img')
+    var oqian = document.getElementById('qian')
+    var ohou = document.getElementById('hou')
+    var ofei=document.getElementById('fei')
+    var shuxing = 0
+    function gun(elem) {
+        for (i = 0; i < ali.length; i++) {
+            ali[i].className = ''
+            aimg[i].className = ''
+        }
+        elem.className = 'shehuang'
+        aimg[elem.shuxing].className = 'nengkanjian'
+    }
+
+    for (i = 0; i < ali.length; i++) {
+        ali[i].shuxing = i
+        ali[i].onmousemove = function () {
+            shuxing = this.shuxing
+            gun(this)
+
+        }
+    }
+
+    ohou.onclick = function () {
+        shuxing++
+        if (shuxing == ali.length) {
+            shuxing = 0
+        }
+        gun(ali[shuxing])
+    }
+    oqian.onclick = function () {
+        shuxing--;
+        if (shuxing == -1) {
+            shuxing = ali.length - 1
+        }
+        gun(ali[shuxing])
+    }
+    var time
+    pao()
+    function pao() {
+        time = setInterval(function () {
+            ohou.onclick()
+;
+        }, 1000)
+    }
+    orq.onmousemove = function () {
+        clearInterval(time)
+    }
+    orq.onmouseout = function () {
+        pao()
+
+    }
+//    orq.onmousedown=function (e) {
+//
+//        var lef=e.clientX-orq.offsetLeft
+//        var to=e.clientY-orq.offsetTop
+//       orq.onmousemove=function (e) {
+//            orq.style.left=e.clientX-lef+'px'
+//           orq.style.top=e.clientY-to+'px'
+//       }
+//
+//    }
+//    orq.onmouseup=function () {
+//        document.onmousemove=null
+//    }
+    odi.addEventListener()
+</script>
+</body>
+</html>
