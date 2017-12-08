@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+#rongqi {
+    width: 680px;
+    height: 344px;
+    margin: 50px auto;
+    position: absolute;
+}
+
+#imgs img {
+    display: none;
+}
+
+#imgs .nengkanjian {
+    display: block;
+}
+
+#liebiao {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+#liebiao li {
+    float: left;
+    background: #000;
+    color: #FFFFFF;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+#qianhou {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+#qianhou span {
+    width: 20px;
+    height: 20px;
+    background: #000;
+    color: white;
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+
+#liebiao .shehuang {
+    background: #ffff00;
+}

@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+}
+.small{
+    width: 400px;
+    height: 400px;
+    margin: 0;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    border: 0;
+}
+.big{
+    display: none;
+    overflow: hidden;
+    float: left;
+    width: 400px;
+    height: 400px;
+    margin: 0;
+    position: relative;
+}
+.big img{
+    width: 1600px;
+    height: 1600px;
+    position: absolute;
+    left:500px;
+    top:0
+}
+.magnifier{
+    display: none;
+    width: 200px;
+    height: 200px;
+    background: black;
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 0.6;
+}
